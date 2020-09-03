@@ -7,7 +7,7 @@ CS201
 WEEK OF 08/31/20
 PURPOSE OF PROGRAM
 	Get Integer from user, then print the square of the next integer 
-	Example: User inputs 3, Next number is 4 then squared is 16. Output will be 16.
+	Example: User inputs 3, Next number is 4 then squared is 16. Output would be 16.
 */
 int main() {
 	//List of variables
