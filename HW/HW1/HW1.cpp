@@ -41,15 +41,16 @@ PURPOSE OF PROGRAM
 int main() {
 	//variable list
 	int user_input;
+	int input_limit = 0;
 	int k;
 	
 	do {
 		cout << "Please enter a  postive integer: " << '\n';
 			cin >> user_input;
-			if (user_input < 0) {
+			if (user_input < input_limit) {
 				cout << user_input << " Is not a postive integer" << endl;
 		}
-	} while (user_input < 0);
+	} while (user_input < input_limit);
 	for (k = 1; k <= user_input * 2 - 1; k++) {
 		cout << "bruh" << endl;
 
