@@ -43,7 +43,9 @@ int main() {
 	int user_input;
 	int input_limit = 0;
 	int k;
+	int space;
 	
+	//User Input
 	do {
 		cout << "Please enter a  postive integer: " << '\n';
 			cin >> user_input;
@@ -51,9 +53,34 @@ int main() {
 				cout << user_input << " Is not a postive integer" << endl;
 		}
 	} while (user_input < input_limit);
-	for (k = 1; k <= user_input * 2 - 1; k++) {
-		cout << "bruh" << endl;
 
+
+	space = user_input - 1;
+	//Code for Creating Diamond
+
+	for (k = 1; k <= user_input; k++) { // outer loop that creates top half for rows == to user input
+		for (int c = 1; c <= space; c++)  //loop that creates spaces to make room for diamond shape
+			cout << " ";
+			space--;
+		
+			
+		for (int c = 1; c <= 2 * k - 1; c++) 
+			cout << "#"; // print character
+			cout << "\n"; // go to next line
+		
 	}
+	space = 1;
+
+	for (k = 1; k <= user_input - 1; k++) { // outer loop that creates bottome half of rows == to user input
+		for (int c = 1; c <= space; c++) 
+			cout << " "; // print space = inner for loop 
+		
+		space++;
+		for (int c = 1; c <= 2 * (user_input - k) - 1; c++) 
+			cout << "#"; //print character
+			cout << "\n"; // go to next line
+		
+	}
+
 	return 0;
 }
