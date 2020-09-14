@@ -56,6 +56,7 @@ int main() {
 
 
 	space = user_input - 1;
+	
 	//Code for Creating Diamond
 
 	for (k = 1; k <= user_input; k++) { // outer loop that creates top half for rows == to user input
