@@ -28,6 +28,12 @@ using std::string;
 using std::vector;
 
 int main() {
-	
-
+	string name;
+	vector <string> names_list;
+	for (int i = 0; i <= 10; ++i) {
+		cout << "Enter a Name";
+		getline(cin, name);
+		names_list.push_back(name);
+	}
+	return 0;
 }
