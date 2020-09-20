@@ -31,23 +31,26 @@ using std::vector;
 //Function list
 
 //Searches name in vector and and returns a bool value of it exist or not
-bool DoesNameExist(const string & nameToFind, const  vector<string> & names) {
-
-}
+//bool DoesNameExist(const string & nameToFind, const  vector<string> & names) {}
 
 // Get names from user, and inputs them into vector names "names_list"
-void InputNames(vector <string> & name_list) {
+void InputNames(vector <string>& name_list) {
 	string name;
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 4; i++) {
 		cout << "Enter in a Name: ";
 		getline(cin, name);
 		name_list.push_back(name);
-		}
-	
+	}
+	 
 }
 
 //Takes a List of Names and prints them.
-//void PrintNames(){}
+void PrintNames(const vector<string> name_list)
+{
+	for (int k = 0; k < name_list.size(); ++k) {
+		cout << name_list[k] << endl;
+	}
+}
 
 //takes vector with names in them and does somthing "special" with them
 //void Special(){}
@@ -57,15 +60,7 @@ int main() {
 	vector <string> name_list;
 	string list_name;
 	int a;
-	cout << "enter in option: ";
-		cin >> a;
-	switch (a) {
-		case 1:
-			InputNames(name_list);
-			break;
-		default:
-			break;
-			return 0;
-	}
+	InputNames(name_list); 
+	PrintNames(name_list);
 	return 0;
 }
