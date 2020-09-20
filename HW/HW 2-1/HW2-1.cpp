@@ -31,10 +31,23 @@ using std::vector;
 //Function list
 
 //Searches name in vector and and returns a bool value of it exist or not
-//bool DoesNameExist(const string & nameToFind, const  vector<string> & names) {}
+bool DoesNameExist(const string & nameToFind, const  vector<string> & name_list)
+{
+	bool namefound;
+	if (std::find(name_list.begin(), name_list.end(), nameToFind) != name_list.end()) {
+		namefound = true;
+		cout << namefound;
+	}
+	else {
+		namefound = false;
+		cout << namefound;
+	}
+
+}
 
 // Get names from user, and inputs them into vector names "names_list"
-void InputNames(vector <string>& name_list) {
+void InputNames(vector <string>& name_list) 
+{
 	string name;
 	for (int i = 0; i < 4; i++) {
 		cout << "Enter in a Name: ";
@@ -57,10 +70,15 @@ void PrintNames(const vector<string> name_list)
 
 
 int main() {
+	string namefind;
 	vector <string> name_list;
 	string list_name;
-	int a;
 	InputNames(name_list); 
+	cout << "enter in a name to find: ";
+	getline(cin, namefind);
+	DoesNameExist(namefind, name_list);
+	cout << "\n";
+
 	PrintNames(name_list);
 	return 0;
 }
