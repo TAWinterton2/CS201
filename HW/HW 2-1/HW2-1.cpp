@@ -33,14 +33,11 @@ using std::vector;
 //Searches name in vector and and returns a bool value of it exist or not
 bool DoesNameExist(const string & nameToFind, const  vector<string> & name_list)
 {
-	bool namefound;
 	if (std::find(name_list.begin(), name_list.end(), nameToFind) != name_list.end()) {
-		namefound = true;
-		cout << namefound;
+		return true;
 	}
 	else {
-		namefound = false;
-		cout << namefound;
+		return false;
 	}
 
 }
@@ -60,7 +57,8 @@ void InputNames(vector <string>& name_list)
 //Takes a List of Names and prints them.
 void PrintNames(const vector<string> name_list)
 {
-	for (int k = 0; k < name_list.size(); ++k) {
+	int o = name_list.size();
+	for (int k = 0; k < o; ++k) {
 		cout << name_list[k] << endl;
 	}
 }
@@ -78,8 +76,14 @@ int main(int argc, char** argv) {
 	InputNames(name_list); 
 	cout << "enter in a name to find: ";
 	getline(cin, namefind);
+	if (DoesNameExist(namefind, name_list)) {
+		cout << true << endl;
+	}
+	else {
+		cout << false << endl;
+	}
 	DoesNameExist(namefind, name_list);
-	cout << "\\n";
+	cout << "\n";
 	PrintNames(name_list);
 	return 0;
 }
