@@ -139,13 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Travis Winterton.000\Downloads\intio (1).cpp" />
-    <ClCompile Include="C:\Users\Travis Winterton.000\Downloads\lab8_main.cpp" />
+    <ClCompile Include="C:\Users\Travis Winterton.000\Favorites\Downloads\intio.cpp" />
+    <ClCompile Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8_main.cpp" />
     <ClCompile Include="Lab8.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Travis Winterton.000\Downloads\intio (1).hpp" />
-    <ClInclude Include="C:\Users\Travis Winterton.000\Downloads\lab8.hpp" />
+    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\intio.hpp" />
+    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
