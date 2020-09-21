@@ -65,8 +65,10 @@ void PrintNames(const vector<string> name_list)
 
 //takes vector with names in them and does somthing "special" with them
 void Special(const vector<string> name_list){
-	cout << "labor day";
+	cout << "labor day, ohhhhh... Labor Day";
+	
 }
+
 
 
 int main(int argc, char** argv) {
@@ -85,5 +87,7 @@ int main(int argc, char** argv) {
 	DoesNameExist(namefind, name_list);
 	cout << "\n";
 	PrintNames(name_list);
+	cout << "\n";
+	Special(name_list);
 	return 0;
 }
