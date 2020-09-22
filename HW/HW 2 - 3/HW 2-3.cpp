@@ -64,6 +64,16 @@ void PrintNameScores(const vector<string>Names, vector<int>Score) {
 	}
 }
 
+bool FindName(const string& nameToFind, vector<string> Names) {
+	if (std::find(Names.begin(), Names.end(), nameToFind) != Names.end()) {
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 	
 
 
@@ -73,6 +83,7 @@ int main() {
 	vector<int>Score;
 	pair<string, int> ScoreName;
 	int list_choice;
+	string namefind;
 
 	AddName_Score(Names, Score, ScoreName);
 
@@ -92,7 +103,15 @@ int main() {
 				PrintNameScores(Names, Score);
 				break;
 			case 3:
-				cout << "option 3" << endl;
+				cout << "Enter in a Name to Find: ";
+				cin >> namefind;
+				if (FindName(namefind, Names)) {
+					cout << "Name Found" << endl;
+				}
+				else
+				{
+					cout << "Name Not Found" << endl;
+				}
 				break;
 			case 4:
 				cout << "option 4" << endl;
