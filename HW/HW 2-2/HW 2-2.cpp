@@ -2,7 +2,7 @@
 #include<string>
 #include<vector>
 #include<math.h>
-
+#include<iomanip>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -30,16 +30,16 @@ PURPOSE OF PROGRAM
 
 //calculates total value of all coins
 void coin_amount_calc(int & pennies, int & nickles, int & dimes, int & quarters, int & dollars) {
-	double penny_value = 0.1;
-	double nickle_value = 0.5;
-	double dime_value = 0.10;
-	double quater_value = .25;
-	double dollar_value = 1.00;
+	float penny_value = 0.01;
+	float nickle_value = 0.05;
+	float dime_value = 0.10;
+	float quater_value = .25;
+	float dollar_value = 1.00;
 
-	const double Total_amount = (pennies * penny_value) + (nickles * nickles) + (dimes * dimes) + (quarters * quater_value) + (dollars * dollars);
+	const float Total_amount = (pennies * penny_value) + (nickles * nickle_value) + (dimes * dime_value) + (quarters * quater_value) + (dollars * dollar_value);
 	
-	cout << "Your total value of all coins is: " << Total_amount;
-
+	cout << std::fixed << std::showpoint;
+	cout << "Your total value of all coins is: $" << std::setprecision(2) << Total_amount;
 }
 
 // main collects # of coins of each type from user
@@ -67,6 +67,7 @@ int main() {
 	cout << "Enter amount of Dollars: ";
 	cin >> dollar_amount;
 
+	coin_amount_calc(penny_amount, nickle_amount, dime_amount, quater_amount, dollar_amount);
 	return 0;
 
 
