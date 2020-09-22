@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<utility>
 
 using std::cout;
 using std::cin;
@@ -33,25 +34,47 @@ using std::string;
 
 
 */
+
+void AddName_Score();
+
+
 int main() {
 
 	int list_choice;
+	cout << "Please select an option:" << endl;
+	cout << "1: Add names and scores" << endl;
+	cout << "2: Print the names and score" << endl;
+	cout << "3: Search for a name" << endl;
+	cout << "4: Search for a score" << endl;
+	
 
-	switch (list_choice) 
-	{
-	case 1:
-		cout << "option one" << endl;
-		break;
-	case 2:
-		cout << "option two" << endl;
-		break;
-	case 3:
-		cout << "option 3" << endl;
-		break;
-	case 4:
-		cout << "option 4" << endl;
-		break;
+	do {
+		cin >> list_choice;
+		switch (list_choice)
+		{
+			case 1:
+				AddName_Score();
+				break;
+			case 2:
+				cout << "option two" << endl;
+				break;
+			case 3:
+				cout << "option 3" << endl;
+				break;
+			case 4:
+				cout << "option 4" << endl;
+				break;
+			default:
+				cout << "option not avaliable" << endl;
+				break;
+				
 
-	}
+		}
+	} while (list_choice < 6);
+	
+	return 0;
+}
 
+void AddName_Score() {
+	cout << "Works!" << endl;
 }
