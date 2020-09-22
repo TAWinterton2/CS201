@@ -49,6 +49,7 @@ void AddName_Score(vector<string>& Names, vector<int>& Score, pair<string, int>&
 
 		if (ScoreName.first == "NoName" && ScoreName.second == 0) {
 			cout << "Data input has stopped" << endl;
+			cout << '\n';
 			break;
 		}
 		else 
@@ -69,6 +70,7 @@ void PrintNameScores(const vector<string>Names, vector<int>Score) {
 		cout << Names[k] << " " << Score[k] << endl;
 
 	}
+	cout << '\n';
 }
 
 bool FindName(const string& nameToFind, vector<string> Names) {
@@ -104,50 +106,65 @@ int main() {
 	int scorefind;
 
 	AddName_Score(Names, Score, ScoreName);
+	do { 
 
-	cout << "Please select an option:" << endl;
-	cout << "1: Add names and scores" << endl;
-	cout << "2: Print the names and score" << endl;
-	cout << "3: Search for a name" << endl;
-	cout << "4: Search for a score" << endl;
-	
+		cout << "Please select an option:" << endl;
+		cout << "1: Add names and scores" << endl;
+		cout << "2: Print the names and score" << endl;
+		cout << "3: Search for a name" << endl;
+		cout << "4: Search for a score" << endl;
+		cout << "0: End Program " << endl;
+
 		cin >> list_choice;
-		switch(list_choice)
+		switch (list_choice)
 		{
-			case 1:
-				AddName_Score(Names, Score, ScoreName);
-				break;
-			case 2:
-				PrintNameScores(Names, Score);
-				break;
-			case 3:
-				cout << "Enter in a Name to Find: ";
-				cin >> namefind;
-				if (FindName(namefind, Names)) {
-					cout << "Name Found" << endl;
-				}
-				else
-				{
-					cout << "Name Not Found" << endl;
-				}
-				break;
-			case 4:
-				cout << "Enter in a Score to Find: " << endl;
-				cin >> scorefind;
-				if (FindScore(scorefind, Score)) {
-					cout << "Score Found" << endl;
-				}
-				else
-				{
-					cout << "Score Not Found" << endl;
-				}
-				break;
-			default:
-				cout << "option not avaliable" << endl;
-				break;
-				
+		case 1:
+			AddName_Score(Names, Score, ScoreName);
+			break;
+		case 2:
+			PrintNameScores(Names, Score);
+			break;
+		case 3:
+			cout << "Enter in a Name to Find: ";
+			cin >> namefind;
+			if (FindName(namefind, Names)) {
+				cout << "Name Found " <<  namefind << endl;
+				cout << '\n';
+			}
+			else
+			{
+				cout << "Name Not Found " << endl;
+				cout << '\n';
+			}
+			break;
+		case 4:
+			cout << "Enter in a Score to Find: " << endl;
+			cin >> scorefind;
+			if (FindScore(scorefind, Score)) {
+				cout << "Score Found" << scorefind << endl;
+				cout << '\n';
+			}
+			else
+			{
+				cout << "Score Not Found" << endl;
+				cout << '\n';
+			}
+			break;
+		case 0:
+			cout << "Program Terminated" << endl;
+			cout << '\n';
+
+			break;
+		default:
+			cout << "option not avaliable" << endl;
+			cout << '\n';
+			break;
+
 
 		}
+
+	} while (list_choice != 0);
+		
 	
 	
 	return 0;
