@@ -4,6 +4,7 @@
 #include<algorithm>
 
 
+
 /*
 TRAVIS WINTERTON
 CS201
@@ -26,7 +27,7 @@ using std::cin;
 using std::endl;
 using std::string;
 using std::vector;
-
+using std::sort;
 
 //Function list
 
@@ -57,21 +58,26 @@ void InputNames(vector <string>& name_list)
 //Takes a List of Names and prints them.
 void PrintNames(const vector<string> name_list)
 {
-	int o = name_list.size();
-	for (int k = 0; k < o; ++k) {
-		cout << name_list[k] << endl;
+	int j = name_list.size();
+	for (int n = 0; n < j; ++n) {
+		cout << name_list[n] << endl;
 	}
 }
 
 //takes vector with names in them and does somthing "special" with them
-void Special(const vector<string> name_list){
-	cout << "labor day, ohhhhh... Labor Day";
+void Special( vector<string> name_list){
+	cout << "Takes Name vector and sorts alphebtically";
+	sort(name_list.begin(), name_list.end());
+	int j = name_list.size();
+	for (int n = 0; n < j; ++n) {
+		cout << name_list[n] << endl;
+	}
 	
 }
 
 
 
-int main(int argc, char** argv) {
+int main() {
 	string namefind;
 	vector <string> name_list;
 	string list_name;
