@@ -2,11 +2,14 @@
 #include<vector>
 #include<string>
 #include<utility>
+#include<algorithm>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::pair;
+using std::vector;
 
 /*
 	TRAVIS WINTERTON
@@ -35,11 +38,25 @@ using std::string;
 
 */
 
-void AddName_Score();
+void AddName_Score(vector<string>Names, vector<int>Score, pair<string, int> ScoreName) {
+	while (std::find(Names.begin(), Names.end(), "NoName") == Names.end() && std::find(Score.begin(), Score.end(), 0) == Score.end())
+	{
+		cout << "Enter in a name: ";
+		getline(cin, ScoreName.first);
+
+		cout << "Enter in Score: ";
+		cin >> ScoreName.second;
+
+		Names.push_back(ScoreName.first);
+		Score.push_back(ScoreName.second);
+	}
+}
 
 
 int main() {
-
+	vector<string>Names;
+	vector<int>Score;
+	pair<string, int> ScoreName;
 	int list_choice;
 	cout << "Please select an option:" << endl;
 	cout << "1: Add names and scores" << endl;
@@ -47,13 +64,14 @@ int main() {
 	cout << "3: Search for a name" << endl;
 	cout << "4: Search for a score" << endl;
 	
+	pair<string, int> ScoreName;
 
 	do {
 		cin >> list_choice;
-		switch (list_choice)
+		switch(list_choice)
 		{
 			case 1:
-				AddName_Score();
+				AddName_Score(Names, Score, ScoreName);
 				break;
 			case 2:
 				cout << "option two" << endl;
@@ -73,8 +91,4 @@ int main() {
 	} while (list_choice < 6);
 	
 	return 0;
-}
-
-void AddName_Score() {
-	cout << "Works!" << endl;
 }
