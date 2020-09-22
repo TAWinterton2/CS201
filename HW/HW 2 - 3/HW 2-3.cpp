@@ -74,6 +74,16 @@ bool FindName(const string& nameToFind, vector<string> Names) {
 	}
 }
 
+bool FindScore(const int& ScoreToFind, vector<int> Score) {
+	if (std::find(Score.begin(), Score.end(), ScoreToFind) != Score.end()) {
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 	
 
 
@@ -84,6 +94,7 @@ int main() {
 	pair<string, int> ScoreName;
 	int list_choice;
 	string namefind;
+	int scorefind;
 
 	AddName_Score(Names, Score, ScoreName);
 
@@ -114,7 +125,15 @@ int main() {
 				}
 				break;
 			case 4:
-				cout << "option 4" << endl;
+				cout << "Enter in a Score to Find: " << endl;
+				cin >> scorefind;
+				if (FindScore(scorefind, Score)) {
+					cout << "Score Found" << endl;
+				}
+				else
+				{
+					cout << "Score Not Found" << endl;
+				}
 				break;
 			default:
 				cout << "option not avaliable" << endl;
