@@ -30,6 +30,8 @@ PURPOSE OF PROGRAM
 
 //calculates total value of all coins
 void coin_amount_calc(int & pennies, int & nickles, int & dimes, int & quarters, int & dollars) {
+	//list of values associated with each coin
+
 	float penny_value = 0.01;
 	float nickle_value = 0.05;
 	float dime_value = 0.10;
@@ -44,7 +46,7 @@ void coin_amount_calc(int & pennies, int & nickles, int & dimes, int & quarters,
 
 // main collects # of coins of each type from user
 int main() {
-	//list of values associated with each coic
+	
 	
 	int penny_amount;
 	int nickle_amount;
@@ -67,6 +69,42 @@ int main() {
 	cout << "Enter amount of Dollars: ";
 	cin >> dollar_amount;
 
+	if (penny_amount == 1) {
+		cout << "You Have " << penny_amount << " penny" << endl;
+	}
+	else {
+		cout << "You Have " << penny_amount << " pennies" << endl;
+	}
+
+	if (nickle_amount == 1) {
+		cout << "You Have " << nickle_amount << " Nickle" << endl;
+	}
+	else {
+		cout << "You Have " << nickle_amount << " Nickles" << endl;
+	}
+
+
+	if (dime_amount == 1) {
+		cout << "You Have " << dime_amount << " Dime" << endl;
+	}
+	else {
+		cout << "You Have " << dime_amount << " Dimes" << endl;
+	}
+
+
+	if (quater_amount == 1) {
+		cout << "You Have " << quater_amount << " Quater" << endl;
+	}
+	else {
+		cout << "You Have " << quater_amount << " Quaters" << endl;
+	}
+
+	if (dollar_amount == 1) {
+		cout << "You Have " << dollar_amount << " Dollar" << endl;
+	}
+	else {
+		cout << "You Have " << dollar_amount << " Dollars" << endl;
+	}
 	coin_amount_calc(penny_amount, nickle_amount, dime_amount, quater_amount, dollar_amount);
 	return 0;
 
