@@ -38,23 +38,30 @@ using std::vector;
 
 */
 
-void AddName_Score(vector<string>&Names, vector<int>&Score, pair<string, int> &ScoreName) {
+void AddName_Score(vector<string>& Names, vector<int>& Score, pair<string, int>& ScoreName) {
 	cout << "Type in NoName and Then 0 to terminate" << endl;
-	while (std::find(Names.begin(), Names.end(), "NoName") == Names.end() && std::find(Score.begin(), Score.end(), 0) == Score.end())
+	do
 	{
-		
-
 		cout << "Enter in a name: ";
 		cin >> ScoreName.first;
 		cout << "Enter in a score: ";
 		cin >> ScoreName.second;
 
-		Names.push_back(ScoreName.first);
-		Score.push_back(ScoreName.second);
+		if (ScoreName.first == "NoName" && ScoreName.second == 0) {
+			cout << "Data input has stopped" << endl;
+			break;
+		}
+		else 
+		{
+			Names.push_back(ScoreName.first);
+			Score.push_back(ScoreName.second);
+		}
 
-		
-	}
+
+	} while (std::find(Names.begin(), Names.end(), "NoName") == Names.end() && std::find(Score.begin(), Score.end(), 0) == Score.end());
+
 }
+
 
 void PrintNameScores(const vector<string>Names, vector<int>Score) {
 	int o = Names.size();
