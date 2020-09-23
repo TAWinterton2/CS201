@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lab8.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8_main.cpp">
+    <ClCompile Include="lab8.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Travis Winterton.000\Favorites\Downloads\intio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8.hpp">
+    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\intio.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\intio.hpp">
+    <ClInclude Include="C:\Users\Travis Winterton.000\Favorites\Downloads\lab8.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
