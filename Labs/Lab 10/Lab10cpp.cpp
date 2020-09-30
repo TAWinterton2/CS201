@@ -9,24 +9,8 @@ using std::endl;
 
 
 bool isDiv3(int value) {
-	int remainder = value % 3;
-
-	if (remainder == 0) {
-		return true;
-	}
-	else {
-		return false;
-	}
+	return(value % 3 == 0);
 }
-
-
-	
-	
-
-
-
-
-
 
 //main function
 	int main()

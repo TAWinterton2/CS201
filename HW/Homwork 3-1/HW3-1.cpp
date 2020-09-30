@@ -30,14 +30,32 @@ PURPOSE OF PROGRAM
 int main() {
 	int layers;
 	string message;
+	
+	int user_continue = 1;
 
-	//get infro from user
-	cout << "Enter the # of layers you want: ";
-	cin >> layers;
-	cout << "Enter in message you want to display: ";
-	cin >> message;
+	while (user_continue != 0)
+	{
+		//get infro from user
+		do {
+		cout << "Enter the # of layers you want: ";
+		cin >> layers;
+		if (layers < 0) {
+			cout << "Please enter a postive Integer" << '\n';
+		}
+		} while (layers < 0);
+		
 
-	//display box using functoin
-	BoxCreate(layers, message);
+		cout << "Enter in message you want to display: ";
+		cin >> message;
+
+		//display box using functoin
+		BoxCreate(layers, message);
+
+		cout << "would you like to create another box? ";
+		cout << "[ 1 = Yes || 0 = No ]: ";
+		cin >> user_continue;
+
+
+	}
 	return 0;
 }
