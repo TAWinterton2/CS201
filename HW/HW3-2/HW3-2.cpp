@@ -25,8 +25,14 @@ using std::vector;
 int main() {
 	int user_input = 0;
 	cout << "Enter in a postitive number to run through the Collatz sequence" << "\n";
-	while (user_input <= 0) {
+	do{
 		cout << "Enter in a number: ";
-
-	}
+		cin >> user_input;
+		if (user_input <=0) {
+			cout << "Please Enter in a Positive Integer" << '\n';
+		}
+		
+	} while (user_input <=0);
+	cout << user_input;
+	return 0;
 }
