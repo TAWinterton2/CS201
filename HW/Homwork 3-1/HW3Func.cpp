@@ -36,12 +36,15 @@ void BoxCreate(int layer, string message)
 	//empyt part w/ text
 	for (int n = 0; n < layer; n++)
 		cout << '*';
+
 	cout << " ";
 	cout << message;
 	cout << " ";
+
 	for (int n = 0; n < layer; n++)
 		cout << '*';
 	cout << endl;
+
 	//right side of box
 	for (int k = 0; k < 2; k++) {
 		for (int n = 0; n < layer; n++)

@@ -35,6 +35,8 @@ int main() {
 	
 	while (user_continue != 0)
 	{
+		
+
 		//get infro from user
 		do {
 		cout << "Enter the # of layers you want: ";
@@ -51,9 +53,14 @@ int main() {
 		//display box using functoin
 		BoxCreate(layers, message);
 
-		cout << "would you like to create another box? ";
-		cout << "[ 1 = Yes || 0 = No ]: ";
-		cin >> user_continue;
+		do {
+			cout << "would you like to create another box? ";
+			cout << "[ 1 = Yes || 0 = No ]: ";
+			cin >> user_continue;
+			if (user_continue != 1 && user_continue != 0) {
+				cout << "Invalid input, Please enter in either 1 or 0" << '\n';
+			}
+		} while (user_continue != 1 && user_continue != 0);
 
 
 	}
