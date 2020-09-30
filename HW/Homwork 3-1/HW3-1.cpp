@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include"HW3func.h"
 
 using std::cout;
 using std::cin;
@@ -26,5 +27,8 @@ PURPOSE OF PROGRAM
 */
 
 int main() {
-
+	int layer = 3;
+	string message = "OK!";
+	BoxCreate(layer, message);
+	return 0;
 }

@@ -11,6 +11,9 @@ using std::string;
 
 //function
 
-void BoxCreate(int& layers, string message) {
+void BoxCreate(int layer, string message)
+{
+	cout << layer << endl;
+	cout << message << endl;
 	cout << "test" << endl;
 }
