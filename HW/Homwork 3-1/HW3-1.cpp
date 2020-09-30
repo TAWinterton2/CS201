@@ -26,9 +26,18 @@ PURPOSE OF PROGRAM
 		THE INTEGER SPECIFIES THE NUMBER OF LAYERS IN THE BOX.
 */
 
+//main function
 int main() {
-	int layer = 3;
-	string message = "OK!";
-	BoxCreate(layer, message);
+	int layers;
+	string message;
+
+	//get infro from user
+	cout << "Enter the # of layers you want: ";
+	cin >> layers;
+	cout << "Enter in message you want to display: ";
+	cin >> message;
+
+	//display box using functoin
+	BoxCreate(layers, message);
 	return 0;
 }
