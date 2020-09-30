@@ -32,7 +32,7 @@ int main() {
 	string message;
 	
 	int user_continue = 1;
-
+	
 	while (user_continue != 0)
 	{
 		//get infro from user
