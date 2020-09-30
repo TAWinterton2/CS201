@@ -14,7 +14,7 @@ using std::string;
 void BoxCreate(int layer, string message)
 {
 	//for loop to create top layer of box
-	
+
 	//top layer of box
 	for (int i = 0; i < layer;i++)
 	{
@@ -25,7 +25,7 @@ void BoxCreate(int layer, string message)
 	}
 
 	//middle part w/ text
-	//left side of box
+	//top mid layer
 	for (int k = 0; k < 2;k++) {
 		for (int n = 0; n < layer; n++)
 			cout << '*';
@@ -34,25 +34,16 @@ void BoxCreate(int layer, string message)
 	}
 	cout << endl;
 
-	//empyt part w/ text
+	//text layer
 	for (int n = 0; n < layer; n++)
 		cout << '*';
+	for (int g = 0; g < (message.size() + 10) - (layer * 2); g++)
 		cout << " ";
-
-		cout << message << " ";
-
-	for (int n = 0; n < message.size() - layer; n++)
-		cout << " ";
-
 	for (int n = 0; n < layer; n++)
-		cout << "*";
-	
-	
-
-		
+		cout << '*';
 	cout << endl;
 
-	//right side of box
+	//Mid bottom layer
 	for (int k = 0; k < 2; k++) {
 		for (int n = 0; n < layer; n++)
 			cout << "*";
