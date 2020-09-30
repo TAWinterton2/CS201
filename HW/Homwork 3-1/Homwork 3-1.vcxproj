@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HW3-1.cpp" />
+    <ClCompile Include="HW3Func.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HW3func.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
