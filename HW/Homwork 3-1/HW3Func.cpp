@@ -25,6 +25,7 @@ void BoxCreate(int layer, string message)
 	}
 
 	//middle part w/ text
+
 	//top mid layer
 	for (int k = 0; k < 2;k++) {
 		for (int n = 0; n < layer; n++)
@@ -35,7 +36,16 @@ void BoxCreate(int layer, string message)
 	cout << endl;
 
 	//text layer
-	
+	for (int n = 0; n < layer; n++)
+		cout << '*';
+	for (int g = layer; g < 10 - (layer*2); g++)
+		cout << " ";
+	cout << message;
+	for (int g = 0; g < message.size() - (layer * 2);g++)
+		cout << " ";
+	for (int n = 0; n < layer; n++)
+		cout << '*';
+	cout << endl;
 
 	//Mid bottom layer
 	for (int k = 0; k < 2; k++) {
@@ -44,8 +54,10 @@ void BoxCreate(int layer, string message)
 		for (int g = 0; g < (message.size() + 10) - (layer * 2); g++)
 			cout << " ";
 	}
+
 	cout << endl;
 
+	
 
 	//bottom layer of box
 	for (int i = 0; i < layer; i++)
@@ -56,9 +68,5 @@ void BoxCreate(int layer, string message)
 		cout << endl;
 	}
 
-
-	//calculate size of string + 2blanks
-	// n * 2 + 2 + sizeofstring.size()
-	//
 	
 }
