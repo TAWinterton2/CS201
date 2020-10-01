@@ -15,6 +15,7 @@ Purpose of Program
 #include<math.h>
 #include<iostream>
 #include<string>
+#include"Quadratic.h"
 
 
 using std::cout;
@@ -22,6 +23,13 @@ using std::cin;
 using std::endl;
 using std::string;
 
+
+//main gets inputs from user and computes the roots of function with function QuadtraicComp();
 int main() {
+	double a;
+	double b;
+	double c;
+
+	return 0;
 
 }

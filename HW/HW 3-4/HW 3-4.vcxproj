@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HW3-4cpp.cpp" />
+    <ClCompile Include="Quadratic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Quadratic.h" />

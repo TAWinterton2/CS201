@@ -8,4 +8,7 @@
 //ask user to input numbers of a quadratic equation
 //function then computes both roots 
 //if no real roots can be given, function prints message regarding it. 
+
+double QuadraticComp(double a, double b, double c);
+
 #endif
