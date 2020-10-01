@@ -24,6 +24,7 @@ using std::endl;
 using std::vector;
 
 int main() {
+	// do while loop ends when a positive integer is entered
 	int user_input = 0;
 	cout << "Enter in a postitive number to run through the Collatz sequence" << "\n";
 	do{
@@ -34,6 +35,9 @@ int main() {
 		}
 		
 	} while (user_input <=0);
+
+	//prints out user_input and runs input through collatz funtion ans prints out results
+	//continues untill result is equal to 0
 	cout << user_input << '\n';
 	while (user_input != 1) {
 		user_input = Collatz(user_input);
