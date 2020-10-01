@@ -73,7 +73,8 @@ int main() {
 
 
 	double k = ctok(c);
-	cout << k << '\n';
+	cout << '\n';
+	cout << c << " celuis is " << k << " Kelvin";
 	return 0;
 
 }
