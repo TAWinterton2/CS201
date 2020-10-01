@@ -62,6 +62,10 @@ using std::endl;
 
 
 double ctok(double c) {
+	if (c < -273.15) {
+		cout << "Error!, tempetrure goes below absolute zero!";
+		return 0 ;
+	}
 	double k = c + 273.15;
 	return k;
 }
