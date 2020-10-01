@@ -29,7 +29,22 @@ int main() {
 	double a;
 	double b;
 	double c;
+	cout << "The Format for a quadratic equation goes as follows" << '\n';
+	cout << "ax^2 + bx + c = 0";
 
+	cout << '\n';
+
+	cout << "Enter in a value for A: ";
+	cin >> a;
+
+	cout << "Enter in a value for B: ";
+	cin >> b;
+
+	cout << "Enter in a value for C: ";
+	cin >> c;
+
+	//comput roots and display them 
+	 QuadraticComp(a, b, c);
 	return 0;
 
 }

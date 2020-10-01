@@ -11,6 +11,10 @@ using std::endl;
 
 
 //computes roots of a function with given varibales form user
-double QuadraticComp(double a, double b, double c) {
+void QuadraticComp(double& a, double& b, double& c) {
 
+	cout << a;
+	cout << b;
+	cout << c;
+	
 }
