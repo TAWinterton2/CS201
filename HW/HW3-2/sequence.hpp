@@ -18,5 +18,5 @@
 // cin >> number;
 // cout << Collatz(number);
 
-int Collatz(int start_number);
+int Collatz(int& value);
 #endif

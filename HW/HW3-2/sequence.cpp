@@ -10,7 +10,15 @@ using std::string;
 
 
 
+int Collatz(int &value) {
 
-void Collatz(int value) {
-
+	if (value % 2 == 0) {
+		value = value / 2;
+		return value;
+	}
+	else
+	{
+		value = 3 * value + 1;
+		return value;
+	}
 }

@@ -16,6 +16,7 @@ PURPOSE OF PROGRAM:
 #include<string>
 #include<math.h>
 #include<vector>
+#include"sequence.hpp"
 
 using std::cout;
 using std::cin;
@@ -33,6 +34,10 @@ int main() {
 		}
 		
 	} while (user_input <=0);
-	cout << user_input;
+	cout << user_input << '\n';
+	while (user_input != 1) {
+		user_input = Collatz(user_input);
+		cout << user_input << '\n';
+	}
 	return 0;
 }
