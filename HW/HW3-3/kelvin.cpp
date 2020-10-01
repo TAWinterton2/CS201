@@ -70,6 +70,7 @@ int main() {
 	cout << "Enter in celsius amount to convert to kelvin: ";
 	cin >> c;
 
+
 	double k = ctok(c);
 	cout << k << '\n';
 	return 0;
