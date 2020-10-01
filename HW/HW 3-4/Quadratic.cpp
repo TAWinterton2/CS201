@@ -26,13 +26,15 @@ void QuadraticComp(float a, float b, float c) {
 		cout << "this quadratic has 2 real number solutions" << endl;
 		cout << "Root 1 = " << root_1 << endl;
 		cout << "Root 2 = " << root_2 << endl;
-		cout << a << root_1 << "^2 + " << b << root_1 << " + " << c << " = " << (a * (root_1 * root_1)) + (5 * root_1) + c << endl;
-		cout << a << root_2 << "^2 + " << b << root_2 << " + " << c << " = " << (a * (root_2 * root_2)) + (5 * root_2) + c << endl;
+		cout << a << root_1 << "^2 + " << b << root_1 << " + " << c << " = " << (a * (root_1 * root_1)) + ( b * root_1) + c << endl;
+		cout << a << root_2 << "^2 + " << b << root_2 << " + " << c << " = " << (a * (root_2 * root_2)) + ( b * root_2) + c << endl;
 	}
 	else if (discriminant == 0) {
 		cout << "Roots are real and all the same ";
 		root_1 = (-1 * b + sqrt(discriminant) ) / (2 * a);
 		cout << "Root 1 and Root 2 = " << root_1 << endl;
+		cout << a << "*" <<  root_1 << "^2 + " << b << root_1 << " + " << c << " = " << (a * (root_1 * root_1)) + (b * root_1) + c << endl;
+
 	}
 	else {
 		cout << "Equation has no real roots" << endl;
