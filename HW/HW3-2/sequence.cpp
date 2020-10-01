@@ -9,7 +9,7 @@ using std::endl;
 using std::string;
 
 
-
+// Collatz function takes value and runs it through functoin and retuns result 
 int Collatz(int &value) {
 
 	if (value % 2 == 0) {
