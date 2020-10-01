@@ -26,9 +26,9 @@ using std::string;
 
 //main gets inputs from user and computes the roots of function with function QuadtraicComp();
 int main() {
-	double a;
-	double b;
-	double c;
+	float a;
+	float b;
+	float c;
 	cout << "The Format for a quadratic equation goes as follows" << '\n';
 	cout << "ax^2 + bx + c = 0";
 

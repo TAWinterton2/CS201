@@ -9,6 +9,6 @@
 //function then computes both roots 
 //if no real roots can be given, function prints message regarding it. 
 
-void QuadraticComp(double& a, double& b, double& c);
+void QuadraticComp(float& a, float& b, float& c);
 
 #endif
