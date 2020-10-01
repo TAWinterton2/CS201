@@ -25,6 +25,7 @@
 
 double ctok(double c)
 {
+	//int k should be changed to double
 	int k = c + 273.15;
 	//function returns a data type of "int" , no value will actually be returned
 	//suggested edit: have the fucntion return the value of k
@@ -61,7 +62,7 @@ using std::endl;
 
 
 double ctok(double c) {
-	int k = c + 273.15;
+	double k = c + 273.15;
 	return k;
 }
 
@@ -74,4 +75,5 @@ int main() {
 	double k = ctok(c);
 	cout << k << '\n';
 	return 0;
+
 }
