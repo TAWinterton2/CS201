@@ -19,7 +19,7 @@ int main() {
 	std::cout << "-------------------Required--------------------------"
 			<< std::endl;
 	//TODO Declare a vector of strings named "words"
-	std::vector <std::string> words( "I am the eggman", "I am the walrus! ");
+	std::vector <std::string> words{"I", "am", "the", "eggman.", "I", "am", "the", "eggman." , "I", "am", "the", "Walrus!" };
 	//TODO REQUIRED Print original words with a range-based for loop.
 	//     Access each string by-reference and make it constant.
 	for (auto a : words) 
@@ -33,7 +33,7 @@ int main() {
 
 	//TODO ADDITIONAL 1 Create this function in vector_manip.cpp
 	char ch = 'x';
-//	firstLetterChange(words, ch);
+	firstLetterChange(words, ch);
 
 	//TODO print strings that had their first letter changed in vector
 
@@ -43,7 +43,7 @@ int main() {
 
 	//TODO ADDITIONAL 2 Create this function in vector_manip.cpp
 	std::cout << "Enter strings to add to vector:" << std::endl;
-//	addUserStrings(words, "done");
+	addUserStrings(words, "done");
 
 	//TODO Print the vector after adding words.
 

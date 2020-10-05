@@ -27,7 +27,7 @@
  * @param strVec vector of strings to change
  * @param c new first letter character.
  */
-//void firstLetterChange(std::vector<std::string> & strVec, const char & c);
+void firstLetterChange(std::vector<std::string> & strVec, const char & c);
 
 /**
  * ADDITIONAL 2
@@ -37,7 +37,7 @@
  * @param strVec vector of strings
  * @param sentinel string to stop on (e.g., "end" or "done")
  */
-//void addUserStrings(std::vector<std::string> & strVec,
-//		const std::string sentinel);
+void addUserStrings(std::vector<std::string> & strVec,
+		const std::string sentinel);
 
 #endif /* VECTOR_MANIP_HPP_ */
