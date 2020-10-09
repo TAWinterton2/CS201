@@ -31,8 +31,11 @@ bool Readline(string& str) {
 	//uses std::istringstream to read strings separated by whitespace characters.
 	//push a blacnk string at the end of each line. It should return the number of tokesn read from the string
 unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
-	 istringstream input;
-	tokens.push_back(input);
+	istringstream check(input);
+	string user_input;
+	while (getline(check, user_input, ' ')) {
+		tokens.push_back(user_input);
+	}
 	int a = tokens.size();
 	return a;
 }
