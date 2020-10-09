@@ -24,13 +24,13 @@ int main() {
 			StringToTokenWS(user_input, tokens);
 		}
 		transform(user_input.begin(), user_input.end(), user_input.begin(), ::tolower);
-		
+
 
 	} while (user_input != "end");
 	//print out results
 	cout << "\n";
 
 	AnalyzeTokens(tokens);
-	
+
 	return 0;
 }
