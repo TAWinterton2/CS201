@@ -34,6 +34,7 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	istringstream check(input);
 	string user_input;
 	while (getline(check, user_input, ' ')) {
+	
 		tokens.push_back(user_input);
 	}
 	int a = tokens.size();
@@ -50,8 +51,9 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	// f) Optional, handel the case of special characters
 	//AnalyzeTokens should print out the tpye of token and the token itself surrounded by quotation marks.
 void AnalyzeTokens(vector<string>& tokens) {
-	for (auto a : tokens) {
-		cout << a << endl;
+	for (int a = 0; a < tokens.size(); a++) {
+
+		cout << tokens[a] << endl;
 	}
 
 }
