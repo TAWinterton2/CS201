@@ -76,8 +76,9 @@ void AnalyzeTokens(vector<string>& tokens) {
 		
 		//Check to see if token is whitespace
 		bool is_space = true;
+		
 		for (int i = 0; i < a.size(); i++) {
-			if (isspace(a[i])){
+			if (a.empty()){
 				is_space = true;
 
 			}

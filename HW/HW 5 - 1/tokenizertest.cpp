@@ -33,9 +33,5 @@ int main() {
 	AnalyzeTokens(tokens);
 
 
-	cout << endl;
-
-	string a = "a";
-	cout << a.length();
 	return 0;
 }
