@@ -7,6 +7,7 @@
 #include<string>
 #include<algorithm>
 #include<vector>
+#include<sstream>
 
 using std::cout;
 using std::cin;

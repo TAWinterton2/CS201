@@ -2,8 +2,10 @@
 #include<string>
 #include<algorithm>
 #include<vector>
+#include<sstream>
 #include"tokenizer.h"
 
+using std::istringstream;
 using std::cout;
 using std::cin;
 using std::endl;
@@ -15,15 +17,25 @@ using std::vector;
 	// uses getline() to get a line of text from the user. 
 	//It should return true if it read the string and false if the string was a blank line.
 bool Readline(string& str) {
-	return true;
+	getline(cin, str);
+
+	if (str.empty()) {
+		return false;
+	}
+	else {
+		return true;
+	}
 }
 
 //unsigend StringToTokenWS(const string &input, vector<string> & tokens)
 	//uses std::istringstream to read strings separated by whitespace characters.
 	//push a blacnk string at the end of each line. It should return the number of tokesn read from the string
-//unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
-	
-//}
+unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
+	 istringstream input;
+	tokens.push_back(input);
+	int a = tokens.size();
+	return a;
+}
 
 //void AnalyzeTokens(vector<string> &tokens);
 	// takes vector and determine if the token is:
@@ -34,6 +46,10 @@ bool Readline(string& str) {
 	// e) and unknown (undetermined form the input)
 	// f) Optional, handel the case of special characters
 	//AnalyzeTokens should print out the tpye of token and the token itself surrounded by quotation marks.
-//void AnalyzeTokens(vector<string>& tokens) {
+void AnalyzeTokens(vector<string>& tokens) {
+	for (auto a : tokens) {
+		cout << a << endl;
+	}
 
-//
+}
+

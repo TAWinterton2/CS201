@@ -2,6 +2,7 @@
 #include<string>
 #include<algorithm>
 #include<vector>
+#include<sstream>
 #include"tokenizer.h"
 
 using std::cout;
@@ -12,15 +13,24 @@ using std::vector;
 
 int main() {
 	string user_input;
+	vector <string> tokens;
+
+	//user input 
 	cout << "Please type in some text. When you are done, type 'End', 'end', or 'END' ";
 	cout << "\n";
 	do {
-		getline(cin, user_input);
+		//if user inputed a string, adds to vector
+		if (Readline(user_input) == true) {
+			StringToTokenWS(user_input, tokens);
+		}
 		transform(user_input.begin(), user_input.end(), user_input.begin(), ::tolower);
-		Readline(user_input);
+		
 
 	} while (user_input != "end");
-	
+	//print out results
+	cout << "\n";
+
+	AnalyzeTokens(tokens);
 	
 	return 0;
 }
