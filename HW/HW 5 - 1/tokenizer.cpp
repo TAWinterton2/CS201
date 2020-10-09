@@ -51,9 +51,47 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	// f) Optional, handel the case of special characters
 	//AnalyzeTokens should print out the tpye of token and the token itself surrounded by quotation marks.
 void AnalyzeTokens(vector<string>& tokens) {
-	for (int a = 0; a < tokens.size(); a++) {
+	for (auto a : tokens) {
 
-		cout << tokens[a] << endl;
+		//checks to see if token is  digit literal
+		bool is_int = true;
+		
+		for (int i = 0; i < a.size(); i++) {
+			if (isdigit(a[i])) {
+				is_int = true;
+
+			}
+			else {
+				is_int = false;
+				break;
+			}
+			
+		}
+		if (is_int) {
+			cout << "Integer Literal" << endl;
+			continue;
+		}
+		
+		//Check to see if token is String Literal
+		bool is_string = true;
+		for (int i = 0; i < a.size(); i++) {
+			if (a.find(a) !=  string::npos) {
+				is_string = true;
+
+			}
+			else {
+				is_int = false;
+				break;
+			}
+			
+		}
+		if (is_int) {
+			cout << "Integer Literal" << endl;
+			continue;
+		}
+		if (is_string) {
+			cout << "String literal" << endl;
+			continue;
+		}
 	}
-
 }
