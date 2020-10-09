@@ -67,8 +67,9 @@ void AnalyzeTokens(vector<string>& tokens) {
 			}
 			
 		}
+		//print out Integer Literal
 		if (is_int) {
-			cout << "Integer Literal" << endl;
+			cout << "Integer Literal" << '"' << a << '"' << endl;
 			continue;
 		}
 		
@@ -85,12 +86,9 @@ void AnalyzeTokens(vector<string>& tokens) {
 			}
 			
 		}
-		if (is_int) {
-			cout << "Integer Literal" << endl;
-			continue;
-		}
+		//print out all tokens of the vector and shows what type they are
 		if (is_string) {
-			cout << "String literal" << endl;
+			cout << "String literal" << '"' << a << '"' << endl;
 			continue;
 		}
 	}
