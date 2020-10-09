@@ -61,6 +61,7 @@ void AnalyzeTokens(vector<string>& tokens) {
 				is_int = true;
 
 			}
+		
 			else {
 				is_int = false;
 				break;
@@ -69,27 +70,69 @@ void AnalyzeTokens(vector<string>& tokens) {
 		}
 		//print out Integer Literal
 		if (is_int) {
-			cout << "Integer Literal" << '"' << a << '"' << endl;
+			cout << "Integer Literal"  << '\t' << '"' << a << '"' << endl;
 			continue;
 		}
 		
+		//Check to see if token is whitespace
+		bool is_space = true;
+		for (int i = 0; i < a.size(); i++) {
+			if (isspace(a[i])){
+				is_space = true;
+
+			}
+
+			else {
+				is_space = false;
+				break;
+			}
+
+		}
+		//print out all tokens of the vector and shows what type they are
+		if (is_space) {
+			cout << "White Space: " << endl;
+			continue;
+		}
+
+
+
 		//Check to see if token is String Literal
 		bool is_string = true;
 		for (int i = 0; i < a.size(); i++) {
-			if (a.find(a) !=  string::npos) {
+			if (a.find(a) != string::npos && a.length() > 1) {
 				is_string = true;
 
 			}
 			else {
-				is_int = false;
+				is_string = false;
 				break;
 			}
 			
 		}
 		//print out all tokens of the vector and shows what type they are
 		if (is_string) {
-			cout << "String literal" << '"' << a << '"' << endl;
+			cout << "String literal: " << '\t' << '"' << a << '"' << endl;
 			continue;
 		}
+
+		//Check to See if literal is an Identifier Literal
+		bool is_identifi = true;
+		for (int i = 0; i < a.size(); i++) {
+			if (isalpha(a[i]) && a.length() == 1) {
+				is_identifi = true;
+
+			}
+			else {
+				is_identifi = false;
+				break;
+			}
+
+		}
+		//print out all tokens of the vector and shows what type they are
+		if (is_identifi) {
+			cout << "Identifier literal: " << '\t' << '"' << a << '"' << endl;
+			continue;
+		}
+
 	}
 }
