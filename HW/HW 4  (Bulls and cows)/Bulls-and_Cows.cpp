@@ -17,9 +17,9 @@ using std::vector;
 
 
 int main() {
-	//int bull;
-	//int cow;
-	//int guess;
+	int bull = 0;
+	int cow = 0;
+	int item;
 
 	vector<int> bullandcow{
 		1,7,9,9
@@ -47,9 +47,14 @@ int main() {
 		cout << "CORRECT!!!!!";
 		return 0;
 	}
+
+	//check for bulls and cows
 	for (int b = 0; b < n; b++) {
-		int search = user_guess[b];
-		it  = std::find(bullandcow.begin(), bullandcow.end(), search);
+		item = bullandcow[b];
+		if (user_guess[b] == bullandcow[b]) {
+			bull++;
+		}
+		else if()
 	}
 	
 	return 0;
