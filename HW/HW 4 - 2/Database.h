@@ -24,9 +24,15 @@ struct Music_ratings
 };
 
 //crud functions
+
+
+//create new data set
 bool CreateRecord(const string& key);
+//print out data set
 bool ReadRecord(const string& key, const Music_ratings& record);
+//update existing data set
 bool UpdateRecord(const string& key, const Music_ratings& record);
+//delete dataset
 bool DeleteRecord(const string& key);
 #endif
 
