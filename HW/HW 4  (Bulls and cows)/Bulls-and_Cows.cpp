@@ -31,13 +31,6 @@ int main() {
 	cout << "Enter in a negative number to show answer";
 	cin >> guess;
 	for (auto B : user_guess) {
-		cin >> guess;
-		if (guess < 0) {
-			for (auto a : bullandcow) {
-				cout << a << endl;
-				break;
-			}
-		}
 
 	}
 
