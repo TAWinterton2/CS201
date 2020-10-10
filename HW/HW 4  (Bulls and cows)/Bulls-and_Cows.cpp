@@ -39,8 +39,12 @@ int main() {
 			
 		}
 	}
-	for (auto a : user_guess) {
-		cout << a << endl;
+	cout << '\n';
+
+	//checks if user guess is euqal to bullandcow vector
+	if (bullandcow == user_guess) {
+		cout << "CORRECT!!!!!";
+		return 0;
 	}
 	
 	return 0;
