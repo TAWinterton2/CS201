@@ -26,6 +26,7 @@ int main() {
 	};
 	int n = bullandcow.size();
 	vector<int> user_guess(n);
+	std::vector<int>::iterator it;
 
 	cout << "Try to Guess the Numbers! (0 - 9): ";
 	cout << "Enter in a negative number to show answer: " << endl;
@@ -45,6 +46,10 @@ int main() {
 	if (bullandcow == user_guess) {
 		cout << "CORRECT!!!!!";
 		return 0;
+	}
+	for (int b = 0; b < n; b++) {
+		int search = user_guess[b];
+		it  = std::find(bullandcow.begin(), bullandcow.end(), search);
 	}
 	
 	return 0;
