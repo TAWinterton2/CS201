@@ -24,6 +24,6 @@ bool CreateRecord(const string& key, float &score) {
 
 	LP_name.title = key;
 	user_score.score = score;
-	
+	return true;
 
 }
