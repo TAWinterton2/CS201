@@ -18,7 +18,10 @@ using std::vector;
 int main() {
 	int choice;
 	string LP_name;
-	float user_score;
+	int x = 0;
+	//float user_score;
+
+	std::map<string, Music_ratings> Database;
 
 	struct Music_ratings Record;
 
@@ -28,26 +31,34 @@ int main() {
 	cout << "3: Update Record" << endl;
 	cout << "4: Delete record Record" << endl;
 
-	cin >> choice;
-	switch (choice) {
-	case 1:
-		cout << "Enter in name of LP: ";
-		cin >> LP_name;
-		CreateRecord(LP_name);
-		break;
-	case 2:
-		cout << "Enter in name of LP: ";
-		cin >> LP_name;
-		UpdateRecord(LP_name, Record);
-		break;
-	case 3:
-		cout << "works!" << endl;
-		break;
-	case 4:
-		cout << "works!" << endl;
-		break;
-	default:
+	while (x < 1) {
+		cin >> choice;
+		switch (choice) {
+		case 1:
+			cout << "Enter in name of LP: ";
+			cin >> LP_name;
+			CreateRecord(LP_name);
+			continue;
+		case 2:
+			cout << "Enter in name of LP: ";
+			cin >> LP_name;
+			if (ReadRecord(LP_name, Record) == true) {
+				cout << "Does exist!" << endl;
+			}
+			else {
+				cout << "nope" << endl;
+			}
+			continue;
+		case 3:
+			cout << "works!" << endl;
+			continue;
+		case 4:
+			cout << "works!" << endl;
+			break;
+		default:
+			return 0;
+		}
 		return 0;
 	}
-	return 0;
+
 }

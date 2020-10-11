@@ -20,7 +20,6 @@ using std::vector;
 struct Music_ratings
 {
 	string title;
-	float score;
 };
 
 //crud functions

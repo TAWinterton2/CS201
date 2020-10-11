@@ -19,10 +19,8 @@ std::map<string, Music_ratings> Database;
 
 //create a new data set
 bool CreateRecord(const string& key) {
-	Music_ratings data;
-	
-
-	data.title = key;
+	Music_ratings Data;
+	Data.title = key;
 	return true;
 
 }
@@ -35,8 +33,19 @@ bool ReadRecord(const string& key, const Music_ratings& record) {
 	}
 	Database[key] = record;
 	return true;
-	record = it->second;
+	//record = it->second;
 	return true;
 }
 
-bool UpdateRecord(const string& key, const Music_ratings& record);
+bool UpdateRecord(const string& key, const Music_ratings& record) {
+	auto it = Database.find(key);
+	if (it == Database.end()) {
+		return false;
+	}
+	Database[key] = record;
+	return true;
+}
+
+bool DeleteRecord(const string& key) {
+
+}
