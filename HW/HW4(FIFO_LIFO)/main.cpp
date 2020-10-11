@@ -14,5 +14,10 @@ using std::vector;
 
 
 int main() {
+	vector<string> test;
+	string vector_add;
+	int user_choice;
+	cout << "Enter in 5 stings into the vector: ";
+	
 
 }

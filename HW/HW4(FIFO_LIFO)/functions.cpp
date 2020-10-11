@@ -15,16 +15,38 @@ using std::vector;
 #define FILE_FUNCTIONS_HPP
 //Functions for First-in First-out
 //array pop in 
-void FifoPush(vector<string>& container, const string& item);
+void FifoPush(vector<string>& container, const string& item) {
+
+}
 //array pop out
-void FifoPop(vector<string>& container, const string& item);
+void FifoPop(vector<string>& container, const string& item) {
+
+}
 
 //Functions for Last-in Fisrt out
-void LifoPush(vector<string>& container, const string& item);
-void LifoPop(vector<string>& container, const string& item);
+void LifoPush(vector<string>& container, const string& item) {
+
+}
+void LifoPop(vector<string>& container, const string& item) {
+
+}
 
 
 //shared functionality
-bool IsContainerEmpy(const vector<string>& containter);
-void Printcontainer(const vector<string>& containter);
+bool IsContainerEmpy(const vector<string>& containter) {
+
+}
+void Printcontainer(const vector<string>& containter) {
+
+}
+
+//test functions
+bool TestFifo() {
+	FifoPush
+	FifoPop
+}
+bool TeestLifo() {
+	FifoPush
+	FifoPop
+}
 #endif
