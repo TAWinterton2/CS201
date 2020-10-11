@@ -18,22 +18,19 @@ using std::vector;
 std::map<string, Music_ratings> Database;
 
 //create a new data set
-bool CreateRecord(const string& key) {
-	Music_ratings Data;
-	Data.title = key;
-	return true;
+bool CreateRecord(const string& key, const Music_ratings& record) {
+	string 
 
 }
 
 bool ReadRecord(const string& key, const Music_ratings& record) {
-	Music_ratings data;
 	auto it = Database.find(key);
 	if (it == Database.end()) {
 		return false;
 	}
 	Database[key] = record;
 	return true;
-	//record = it->second;
+	record = it->second;
 	return true;
 }
 
@@ -47,5 +44,5 @@ bool UpdateRecord(const string& key, const Music_ratings& record) {
 }
 
 bool DeleteRecord(const string& key) {
-
+	return true;
 }

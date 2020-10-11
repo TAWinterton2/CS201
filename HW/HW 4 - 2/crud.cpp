@@ -37,7 +37,7 @@ int main() {
 		case 1:
 			cout << "Enter in name of LP: ";
 			cin >> LP_name;
-			CreateRecord(LP_name);
+			CreateRecord(LP_name, Record);
 			continue;
 		case 2:
 			cout << "Enter in name of LP: ";
@@ -50,7 +50,7 @@ int main() {
 			}
 			continue;
 		case 3:
-			cout << "works!" << endl;
+			UpdateRecord
 			continue;
 		case 4:
 			cout << "works!" << endl;
