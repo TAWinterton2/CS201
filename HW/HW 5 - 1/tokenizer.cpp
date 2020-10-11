@@ -37,7 +37,6 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	istringstream check(input);
 	string user_input;
 	while (getline(check, user_input, ' ')) {
-	
 		tokens.push_back(user_input);
 	}
 	int a = tokens.size();
@@ -77,25 +76,7 @@ void AnalyzeTokens(vector<string>& tokens) {
 			continue;
 		}
 		
-		//Check to see if token is whitespace
-		bool space = true;
-		for (int i = 0; i < a.size(); i++) {
-			if (isspace(a[i])) {
-				space = true;
-				continue;
-			}
-			else {
-				space = false;
-			}
-
-
-		}
-		//print out all tokens of the vector and shows what type they are
-
-		if (space) {
-			cout << "whitespace" << endl;
-			continue;
-		}
+	
 
 		//Check to see if token is String Literal
 		bool is_string = true;
@@ -116,6 +97,17 @@ void AnalyzeTokens(vector<string>& tokens) {
 			continue;
 		}
 
+		//Check to see if token is whitespace
+		int i = 0;
+		while (a[i]) {
+			char space;
+			space = a[i];
+			if (isspace(space)) {
+				cout << "whitespace" << endl;
+			}
+			i++;
+		}
+		//print out all tokens of the vector and shows what type they are
 		//Check to See if literal is an Identifier Literal
 		bool is_identifi = true;
 		for (int i = 0; i < a.size(); i++) {
