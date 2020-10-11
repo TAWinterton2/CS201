@@ -3,6 +3,8 @@
 #include<algorithm>
 #include<vector>
 #include<sstream>
+#include<stdio.h>
+#include<ctype.h>
 #include"tokenizer.h"
 
 using std::istringstream;
@@ -11,6 +13,7 @@ using std::cin;
 using std::endl;
 using std::string;
 using std::vector;
+
 
 
 //bool Readline(string$ str);
@@ -75,27 +78,24 @@ void AnalyzeTokens(vector<string>& tokens) {
 		}
 		
 		//Check to see if token is whitespace
-		bool is_space = true;
-		
+		bool space = true;
 		for (int i = 0; i < a.size(); i++) {
-			if (a.empty()){
-				is_space = true;
-
+			if (isspace(a[i])) {
+				space = true;
+				continue;
 			}
-
 			else {
-				is_space = false;
-				break;
+				space = false;
 			}
+
 
 		}
 		//print out all tokens of the vector and shows what type they are
-		if (is_space) {
-			cout << "White Space: " << endl;
+
+		if (space) {
+			cout << "whitespace" << endl;
 			continue;
 		}
-
-
 
 		//Check to see if token is String Literal
 		bool is_string = true;
