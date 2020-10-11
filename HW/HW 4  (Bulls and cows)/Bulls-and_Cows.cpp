@@ -21,9 +21,8 @@ int main() {
 	int bull = 0;
 	int cow = 0;
 	int item;
-	bool victory = false;
 	bool game_continue;
-
+	bool victory;
 	vector<int> bullandcow{
 		1,7,9,9
 	};
@@ -32,7 +31,9 @@ int main() {
 	vector<int> user_guess(n);
 
 	std::vector<int>::iterator it;
+	while (game_continue = true) {
 
+	}
 	cout << "Try to Guess the Numbers! (0 - 9): ";
 	cout << "Enter in a negative number to show answer: " << endl;
 	for (int a = 0; a < n; a++) {
@@ -49,11 +50,8 @@ int main() {
 
 	//checks if user guess is euqal to bullandcow vector
 	if (bullandcow == user_guess) {
-		victory = true;
+		cout << "VICTORY!"; 
 		return 0;
-	}
-	else {
-		victory = false;
 	}
 
 	//check for bulls 
@@ -77,10 +75,9 @@ int main() {
 			cow++;
 		}
 	}
-	return 0;
+	
 	if (victory == true) {
 		cout << "Youre Winner!";
-		return 0;
 	}
 	else {
 		cout << "You have: (" << bull << ") Bulls and (" << cow << ") cows";
