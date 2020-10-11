@@ -27,7 +27,7 @@ struct Music_ratings
 
 
 //create new data set
-bool CreateRecord(const string& key, float& score);
+bool CreateRecord(const string& key);
 //print out data set
 bool ReadRecord(const string& key, const Music_ratings& record);
 //update existing data set

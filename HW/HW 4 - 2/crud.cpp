@@ -19,6 +19,9 @@ int main() {
 	int choice;
 	string LP_name;
 	float user_score;
+
+	struct Music_ratings Record;
+
 	cout << "Enter in an option";
 	cout << "1: Create new Record" << endl;
 	cout << "2: Read from current Record" << endl;
@@ -30,12 +33,12 @@ int main() {
 	case 1:
 		cout << "Enter in name of LP: ";
 		cin >> LP_name;
-		cout << "Enter in Score (scale from 0.00 to 5.00: ";
-		cin >> user_score;
-		CreateRecord(LP_name, user_score);
+		CreateRecord(LP_name);
 		break;
 	case 2:
-		cout << "works!" << endl;
+		cout << "Enter in name of LP: ";
+		cin >> LP_name;
+		UpdateRecord(LP_name, Record);
 		break;
 	case 3:
 		cout << "works!" << endl;
