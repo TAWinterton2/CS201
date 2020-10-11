@@ -17,15 +17,20 @@ using std::vector;
 
 
 int main() {
+
 	int bull = 0;
 	int cow = 0;
 	int item;
+	bool victory = false;
+	bool game_continue;
 
 	vector<int> bullandcow{
 		1,7,9,9
 	};
+
 	int n = bullandcow.size();
 	vector<int> user_guess(n);
+
 	std::vector<int>::iterator it;
 
 	cout << "Try to Guess the Numbers! (0 - 9): ";
@@ -44,18 +49,41 @@ int main() {
 
 	//checks if user guess is euqal to bullandcow vector
 	if (bullandcow == user_guess) {
-		cout << "CORRECT!!!!!";
+		victory = true;
 		return 0;
 	}
+	else {
+		victory = false;
+	}
 
-	//check for bulls and cows
+	//check for bulls 
 	for (int b = 0; b < n; b++) {
-		item = bullandcow[b];
 		if (user_guess[b] == bullandcow[b]) {
 			bull++;
 		}
-		else if()
 	}
-	
+	//check to see if user has 4 bulls
+	if (bull == 4) {
+		victory = true;
+	}
+	else {
+		victory = false;
+	}
+
+	//check for cows
+	for (int c = 0; c < n; c++) {
+		it = std::find(bullandcow.begin(), bullandcow.end(), user_guess[c]);
+		if (it != bullandcow.end()) {
+			cow++;
+		}
+	}
+	return 0;
+	if (victory == true) {
+		cout << "Youre Winner!";
+		return 0;
+	}
+	else {
+		cout << "You have: (" << bull << ") Bulls and (" << cow << ") cows";
+	}
 	return 0;
 }
