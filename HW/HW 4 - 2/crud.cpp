@@ -25,7 +25,7 @@ int main() {
 
 	struct Music_ratings Record;
 
-	cout << "Enter in an option";
+	cout << "Enter in an option: " << endl;
 	cout << "1: Create new Record" << endl;
 	cout << "2: Read from current Record" << endl;
 	cout << "3: Update Record" << endl;
@@ -34,11 +34,13 @@ int main() {
 	while (x < 1) {
 		cin >> choice;
 		switch (choice) {
+		//create new record
 		case 1:
 			cout << "Enter in name of LP: ";
 			cin >> LP_name;
-			CreateRecord(LP_name, Record);
+			CreateRecord(LP_name);
 			continue;
+		// read info from existing one
 		case 2:
 			cout << "Enter in name of LP: ";
 			cin >> LP_name;
@@ -49,9 +51,11 @@ int main() {
 				cout << "nope" << endl;
 			}
 			continue;
+		// update current record
 		case 3:
-			UpdateRecord
+			//UpdateRecord
 			continue;
+		// delete record
 		case 4:
 			cout << "works!" << endl;
 			break;

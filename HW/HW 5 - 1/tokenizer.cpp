@@ -54,15 +54,7 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	//AnalyzeTokens should print out the tpye of token and the token itself surrounded by quotation marks.
 void AnalyzeTokens(vector<string>& tokens) {
 	for (auto a : tokens) {
-		int i = 0;
-		while (a[i]) {
-			char space;
-			space = a[i];
-			if (isspace(space)) {
-				cout << "whitespace" << endl;
-			}
-			i++;
-		}
+
 		//checks to see if token is  digit literal
 		bool is_int = true;
 		

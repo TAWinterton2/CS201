@@ -17,21 +17,21 @@ using std::vector;
 
 std::map<string, Music_ratings> Database;
 
-//create a new data set
-bool CreateRecord(const string& key, const Music_ratings& record) {
-	string 
+//create a new record
+bool CreateRecord(const string& key) {
+	Music_ratings data;
+	data.title = key;
 
 }
 
 bool ReadRecord(const string& key, const Music_ratings& record) {
-	auto it = Database.find(key);
-	if (it == Database.end()) {
+	string lp_name = record.title;
+	if (key == lp_name) {
+		return true;
+	}
+	else {
 		return false;
 	}
-	Database[key] = record;
-	return true;
-	record = it->second;
-	return true;
 }
 
 bool UpdateRecord(const string& key, const Music_ratings& record) {
