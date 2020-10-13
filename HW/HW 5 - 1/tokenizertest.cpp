@@ -29,7 +29,9 @@ int main() {
 	} while (user_input != "end");
 	//print out results
 	cout << "\n";
-
+	for (auto a : tokens) {
+		cout << a << endl;
+	}
 	AnalyzeTokens(tokens);
 
 

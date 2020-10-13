@@ -7,6 +7,7 @@
 #include<ctype.h>
 #include"tokenizer.h"
 
+
 using std::istringstream;
 using std::cout;
 using std::cin;
@@ -36,7 +37,9 @@ bool Readline(string& str) {
 unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	istringstream check(input);
 	string user_input;
-	while (getline(check, user_input, ' ')) {
+
+	while (getline(check, user_input)) {
+
 		tokens.push_back(user_input);
 	}
 	int a = tokens.size();
@@ -54,6 +57,14 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	//AnalyzeTokens should print out the tpye of token and the token itself surrounded by quotation marks.
 void AnalyzeTokens(vector<string>& tokens) {
 	for (auto a : tokens) {
+		
+		cout << '<' << a << '>' << endl;
+		//Check to see if token is whitespace
+
+		if (a.size() == 0) {
+			cout << "whitespace" << endl;
+			continue;
+		}
 
 		//checks to see if token is  digit literal
 		bool is_int = true;
@@ -66,7 +77,7 @@ void AnalyzeTokens(vector<string>& tokens) {
 		
 			else {
 				is_int = false;
-				break;
+				continue;
 			}
 			
 		}
@@ -97,16 +108,8 @@ void AnalyzeTokens(vector<string>& tokens) {
 			continue;
 		}
 
-		//Check to see if token is whitespace
-		int i = 0;
-		while (a[i]) {
-			char space;
-			space = a[i];
-			if (isspace(space)) {
-				cout << "whitespace" << endl;
-			}
-			i++;
-		}
+
+		
 		//print out all tokens of the vector and shows what type they are
 		//Check to See if literal is an Identifier Literal
 		bool is_identifi = true;

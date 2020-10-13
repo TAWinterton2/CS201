@@ -53,11 +53,17 @@ int main() {
 			continue;
 		// update current record
 		case 3:
-			//UpdateRecord
+			cout << "Enter in name of LP: ";
+			cin >> LP_name;
+			UpdateRecord(LP_name);
+			continue;
 			continue;
 		// delete record
 		case 4:
-			cout << "works!" << endl;
+			cout << "Enter in name of LP: ";
+			cin >> LP_name;
+			DeleteRecord(LP_name);
+			continue;
 			break;
 		default:
 			return 0;

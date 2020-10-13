@@ -16,12 +16,12 @@ using std::vector;
 
 
 std::map<string, Music_ratings> Database;
+struct Music_ratings Record;
 
 //create a new record
 bool CreateRecord(const string& key) {
-	Music_ratings data;
-	data.title = key;
-
+	Record.title = key;
+	return true;
 }
 
 bool ReadRecord(const string& key, const Music_ratings& record) {
