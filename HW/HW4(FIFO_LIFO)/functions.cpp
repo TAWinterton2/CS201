@@ -16,37 +16,23 @@ using std::vector;
 //Functions for First-in First-out
 //array pop in 
 void FifoPush(vector<string>& container, const string& item) {
-
+	container.push_back(item);
+	for (auto a : container) {
+		cout << a << ' ';
+	}
 }
 //array pop out
 void FifoPop(vector<string>& container, const string& item) {
-
+	container.pop_back();
 }
 
 //Functions for Last-in Fisrt out
 void LifoPush(vector<string>& container, const string& item) {
-
+	cout << "works";
 }
 void LifoPop(vector<string>& container, const string& item) {
-
+	cout << "works";
 }
 
 
-//shared functionality
-bool IsContainerEmpy(const vector<string>& containter) {
-
-}
-void Printcontainer(const vector<string>& containter) {
-
-}
-
-//test functions
-bool TestFifo() {
-	FifoPush
-	FifoPop
-}
-bool TeestLifo() {
-	FifoPush
-	FifoPop
-}
 #endif

@@ -39,9 +39,9 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens) {
 	string user_input;
 
 	while (getline(check, user_input)) {
-
 		tokens.push_back(user_input);
 	}
+	
 	int a = tokens.size();
 	return a;
 }
