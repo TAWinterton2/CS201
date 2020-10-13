@@ -47,17 +47,14 @@ int main() {
 			if (ReadRecord(LP_name, Record) == true) {
 				cout << "Does exist!" << endl;
 			}
-			else {
-				cout << "nope" << endl;
-			}
 			continue;
 		// update current record
 		case 3:
 			cout << "Enter in name of LP: ";
 			cin >> LP_name;
-			UpdateRecord(LP_name);
+			UpdateRecord(LP_name, Record);
 			continue;
-			continue;
+			
 		// delete record
 		case 4:
 			cout << "Enter in name of LP: ";

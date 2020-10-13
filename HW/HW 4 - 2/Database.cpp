@@ -25,13 +25,12 @@ bool CreateRecord(const string& key) {
 }
 
 bool ReadRecord(const string& key, const Music_ratings& record) {
-	string lp_name = record.title;
-	if (key == lp_name) {
-		return true;
-	}
-	else {
+	auto it = Database.find(key);
+	if (it == Database.end()) {
 		return false;
 	}
+	record = it->second;
+	return true;
 }
 
 bool UpdateRecord(const string& key, const Music_ratings& record) {

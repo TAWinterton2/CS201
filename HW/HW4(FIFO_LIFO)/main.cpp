@@ -28,6 +28,9 @@ int main() {
 	for (auto a : test) {
 		cout << a << ' ';
 	}
+	cout << endl;
+
+	cin >> vector_add;
 	FifoPop(test, vector_add);
 	for (auto a : test) {
 		cout << a << ' ';
