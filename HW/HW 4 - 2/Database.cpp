@@ -43,5 +43,10 @@ bool UpdateRecord(const string& key, const Music_ratings& record) {
 }
 
 bool DeleteRecord(const string& key) {
+	auto it = Database.find(key);
+	if (it == Database.end()) {
+		return false;
+	}
+	delete[] Record;
 	return true;
 }

@@ -23,7 +23,7 @@ int main() {
 
 	std::map<string, Music_ratings> Database;
 
-	struct Music_ratings Record;
+	struct Music_ratings   Record;
 
 	cout << "Enter in an option: " << endl;
 	cout << "1: Create new Record" << endl;
