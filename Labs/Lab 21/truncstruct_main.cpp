@@ -19,10 +19,11 @@ int main() {
 
 	cout << std::endl;
 
-	trunc8(user_input);
+	StringInfo info = trunc8(user_input);
 
+	cout << "String: " << info.str << std::endl;
+	cout << "Length: " << info.len << std::endl;
 	
-
 	
 	return 0;
 	

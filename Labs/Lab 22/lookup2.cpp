@@ -37,17 +37,19 @@ pair<bool, size_t>
     sequentialSearch(const vector<pair<int, string>> kvpairs,
                      int thekey)
 {
-    for (int a = 0; a <= kvpairs.size(); a++) {
+
+    for (int a = 0; a < kvpairs.size(); a++) {
         if (thekey == kvpairs[a].first) {
-            cout << "Found!" << endl;
-            
+            cout << "Found it!" << endl;
+
             return { true, a };
-       }
-        else {
-            cout << "Data not found" << endl;
-            return{ false, 0 };
         }
- }
+
+    }
+    cout << "Can't find it" << endl;
+    return { false, 0 };
+
+
 }
 
 

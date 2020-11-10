@@ -25,9 +25,8 @@ void LifoPop(vector<string>& container, const string& item);
 
 
 //shared functionality
-bool IsContainerEmpy(const vector<string>& containter);
+//checks if container is empty
+bool IsContainerEmpty(const vector<string>& containter);
+//print out contents of containter
 void Printcontainer(const vector<string>& containter);
 
-//test functions
-bool TestFifo();
-bool TeestLifo();
