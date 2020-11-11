@@ -23,7 +23,7 @@ int RandomBetweenU(int first, int last);
 //int RandomBetweenN(int first, int last) 
 //retunrs a normally distributed random number between first and last, inclusively
 //(E.G 1 and 6 returns numbers between 1 and 6)
-//int RandomBetweenN(int first, int last);
+int RandomBetweenN(int first, int last);
 
 //int RandomBetween(int first, int last) 
 //returns numbers using the rand() function from the C standard libary <stdlib.h>

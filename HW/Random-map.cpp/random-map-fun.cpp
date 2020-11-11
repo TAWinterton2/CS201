@@ -23,3 +23,16 @@ int RandomBetweenU(int first, int last) {
 	 }
 	 return 1;
 }
+
+int RandomBetweenN(int first, int last) {
+	std::random_device rd;
+	mt19937 gen{ rd() };
+
+	std::normal_distribution<> d{ first, last };
+	cout << "Normal Distribution: " << '\n';
+	for (int n = 0; n < 10; ++n) {
+		cout << d(gen) << ' ';
+		cout << '\n';
+	}
+	return 1;
+}
