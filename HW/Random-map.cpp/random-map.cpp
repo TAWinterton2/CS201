@@ -45,14 +45,25 @@ int main()
         std::cin >> user_input_one;
         std::cin >> user_input_two;
 
-        RandomBetweenU(user_input_one, user_input_two);
+       RandomBetweenU(user_input_one, user_input_two);
 
     //Normal Distribution
         int input_one;
         int input_two;
+      //  std::cout << "Enter 2 float point numbers: ";
+      //  std::cin >> input_one;
+        //std::cin >> input_two;
+        //RandomBetweenN(input_one, input_two);
+
+     //Distribution w/ RAND()'
         std::cout << "Enter 2 float point numbers: ";
         std::cin >> input_one;
         std::cin >> input_two;
-        RandomBetweenN(input_one, input_two);
+        RandomBetween(input_one, input_two);
+
+        return 0;
+        std::map<int, int> hist;
+        PrintDistribution(hist);
+
 }
 
