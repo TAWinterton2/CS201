@@ -31,3 +31,4 @@ int main()
             << p.first << ' ' << std::string(p.second / 200, '*') << '\n';
     }
 }
+

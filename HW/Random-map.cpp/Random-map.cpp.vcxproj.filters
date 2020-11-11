@@ -18,5 +18,13 @@
     <ClCompile Include="random-map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="random-map-fun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="random-map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

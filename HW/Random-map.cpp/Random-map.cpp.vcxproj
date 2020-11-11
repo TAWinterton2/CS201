@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="random-map-fun.cpp" />
     <ClCompile Include="random-map.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="random-map.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
