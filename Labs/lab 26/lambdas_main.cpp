@@ -28,23 +28,23 @@ int main() {
 	// TODO: REQUIRED
 	//       Create a vector<pair<size_t, string>> to enumerate
 	//       each string in the WIKIPEDIA_CPP string vector.
-	vector<pair<size_t, string>>;
-	for (auto a : WIKIPEDIA_CPP) {
-
-		}
-
+	vector<pair<size_t, string>> demo;
+	for (std::string str : WIKIPEDIA_CPP) {
+		demo.push_back(std::make_pair(str.size(), str));
+	}
+	
 
 
 	// TODO: REQUIRED
 	//       Use std::sort with a comparison lambda function that sorts
 	//       the vector pairs with the first member in descending order.
-
+	std::sort(demo.begin(), demo.end());
 
 
 	// TODO: REQUIRED
 	//       Use printVectorPairs() to print the vector
-
-
+	std::string out = printVectorPairs(demo.begin(), demo.end());
+		std::cout << out;
 
 	// TODO: ADDITIONAL 1
 	//       Use std::sort with a comparison lambda function that sorts

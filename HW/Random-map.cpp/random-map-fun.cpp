@@ -26,18 +26,19 @@ int RandomBetweenU(int first, int last) {
 	 return 1;
 }
 
-//int RandomBetweenN(int first, int last) {
-	//std::random_device rd;
-	//mt19937 gen{ rd() };
 
-	//std::normal_distribution<> d{ first, last };
-	//cout << "Normal Distribution: " << '\n';
-	//for (int n = 0; n < 10; ++n) {
-	//	cout << d(gen) << ' ';
-	//	cout << '\n';
-	//}
-	//return 1;
-//}
+int RandomBetweenN(int first, int last) {
+	std::random_device rd;
+	mt19937 gen{ rd() };
+
+	std::normal_distribution<> d( first, last );
+	cout << "Normal Distribution: " << '\n';
+	for (int n = 0; n < 10; ++n) {
+		cout << d(gen) << ' ';
+		cout << '\n';
+	}
+	return 1;
+}
 
 
 int RandomBetween(int first, int last) {
@@ -45,7 +46,7 @@ int RandomBetween(int first, int last) {
 	int random_var = std::rand();
 	cout << "Random value on [0 " << RAND_MAX << "]: "
 		<< random_var << '\n';
-	cout << "Rolling d20 10 times: ROLL FOR INITIATIVE!: " << '\n';
+	cout << "Rolling d20 10 times:: " << '\n';
 	int d20;
 	for (int n = 0; n != 10; n++) {
 		d20 = (rand() % 20) + 1;
@@ -54,6 +55,8 @@ int RandomBetween(int first, int last) {
 	return 1;
 }
 
+#if 0
+#endif
 void PrintDistribution(const std::map<int, int>& numbers) {
 	
 }
