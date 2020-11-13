@@ -14,7 +14,7 @@ using std::string;
 using std::vector;
 
 int main() {
-	int menu_choice;
+	int menu_choice = 0;
 	std::map<string, int> cart;
 
 	//main menu
