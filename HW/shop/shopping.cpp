@@ -18,14 +18,14 @@ using std::map;
 int main() {
 	int menu_choice = 0;
 	//shopping cart for user first element being 
-	map<string, int> cart;
-
-
-	map<string, int> stock{
-		{"ramen", 50}
+	map<string, int> cart{
+		{"test", 0}
 	};
 
-	//main menu
+	map<string, int> stock{
+		{"Ramen", 100}
+	};
+
 	cout << "Welcome to KOPINI Store front!" << '\n';
 	while (menu_choice != 5) {
 		cout << "What would you like to do?" << '\n';
@@ -39,29 +39,12 @@ int main() {
 		switch (menu_choice) {
 		case 1:
 			AddItem(cart, stock);
-			cout << endl;
 			continue;
-		case 2:
-			RemoveItem(cart);
 			cout << endl;
-			continue;
-		case 3:
-			cout << "placeholder";
-			cout << endl;
-			continue;
-		case 4:
-			DisplayStock(stock);
-		case 5:
-			Checkout(cart);
-			cout << endl;
-			break;
 		default:
-			cout << "Option not valid" << '\n';
+			cout << "Option not valid" << endl;
 			continue;
-
 		}
-
-
 	}
 	return 0;
 }

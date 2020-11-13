@@ -15,25 +15,8 @@ using std::vector;
 
 
 //user selects item to add into their cart
-void AddItem(std::map<string, int> &cart, std::map<string, int>stock) {
-	string user_input;
-	int user_amount;
-	cout << "What would you like to add? ";
-	cin >> user_input;
-	std::transform(user_input.begin(), user_input.end(), user_input.begin(), [](unsigned char c) { return std::tolower(c); }
-	);
-	auto stock_count = stock.count(user_input);
-	if (stock_count != 0) {
-		cout << "Item is in stock!" << '\n';
-		cout << "Enter Quantity: ";
-		cin >> user_amount;
-		cart.insert({ user_input, user_amount });
-		
-	}
-	else {
-		cout << "Item is not in stock" << '\n';
-	}
-
+void AddItem(std::map<string, int> cart, vector<string>stock) {
+	cout << "Works!";
 }
 
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
@@ -43,13 +26,14 @@ void RemoveItem(std::map<string, int> cart) {
 //display current stock
 
 void DisplayStock(std::map<string, int>stock) {
-	
+	cout << "works!";
+	/*
 	for (const auto a : stock) {
 		auto item = a.first;
 		auto price = a.second;
-		cout << "Item: " << item << " // Price: " << price << '\n';
+		cout << "Item: " << item << " Price: " << price << '\n';
 	}
-	
+	*/
 }
 
 //takes user's cart and adds up total 

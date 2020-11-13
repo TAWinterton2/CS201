@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <iostream>
@@ -18,7 +19,7 @@ using std::vector;
 
 //void AddItem(std::map<string, int> cart, vector<string> stock)
 //user selects item to add into their cart
-void AddItem(std::map<string, int> &cart, std::map<string, int> stock);
+void AddItem(std::map<string, int> cart, std::map<string, int> stock);
 
 //void RemoveItem(std::map<string, int> cart)
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
