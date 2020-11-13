@@ -6,6 +6,7 @@
 #include <cmath>
 #include <ctime>
 #include <cstdlib>
+#include "shopping.h"
 
 using std::cout;
 using std::cin;

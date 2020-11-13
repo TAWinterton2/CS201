@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="shopping.cpp" />
+    <ClCompile Include="shopping_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shopping.h" />

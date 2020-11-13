@@ -18,6 +18,9 @@
     <ClCompile Include="shopping.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="shopping_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shopping.h">
