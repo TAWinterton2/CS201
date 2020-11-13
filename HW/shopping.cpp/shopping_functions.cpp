@@ -7,6 +7,7 @@
 #include <ctime>
 #include <cstdlib>
 
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -38,7 +39,20 @@ void AddItem(std::map<string, int> &cart, std::map<string, int>stock) {
 
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
 void RemoveItem(std::map<string, int> cart) {
-	cout << "Works!";
+	string user_input;
+	cout << "Type in the Item that you want to Remove: ";
+	cin >> user_input;
+	std::transform(user_input.begin(), user_input.end(), user_input.begin(), [](unsigned char c) { return std::tolower(c); }
+	);
+	auto cart_count = cart.count(user_input);
+	if (cart_count != 0) {
+		cart.erase(user_input);
+		cout << "Item has been removed" << endl;
+	}
+	else {
+		cout << "Item Does not exist in your shopping cart" << endl;
+	}
+
 }
 //display current stock
 
