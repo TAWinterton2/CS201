@@ -55,8 +55,17 @@ int RandomBetween(int first, int last) {
 	return 1;
 }
 
-#if 0
-#endif
-void PrintDistribution(const std::map<int, int>& numbers) {
-	
+
+void PrintDistribution( std::map<int, int>& numbers) {
+	cout << "Normal Distribution between 1 and 6" << '\n';
+	std::random_device rd;
+	std::default_random_engine e1(rd());
+	mt19937 gen(rd());
+
+	std::uniform_int_distribution<> distrib(1, 6);
+	for (int n = 0; n < 10; ++n) {
+		numbers[n].second;
+		cout << distrib(gen) << ' ';
+		cout << '\n';
+	}
 }

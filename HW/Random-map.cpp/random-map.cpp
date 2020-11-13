@@ -39,8 +39,17 @@ int main()
     std::cin >> input_two;
     RandomBetween(input_one, input_two);
 
-    return 0;
-    std::map<int, int> hist;
+
+    std::map<int, int> hist{
+        {1, 0},
+        {2, 0},
+        {3, 0},
+        {4, 0},
+        {5, 0},
+        {6, 0},
+
+    };
+
     PrintDistribution(hist);
 
 
