@@ -23,6 +23,18 @@ void AddItem(std::map<string, int> cart, vector<string>stock) {
 void RemoveItem(std::map<string, int> cart) {
 	cout << "Works!";
 }
+//display current stock
+
+void DisplayStock(std::map<string, int>stock) {
+	cout << "works!";
+#if 0
+	for (const auto a : stock) {
+		auto item = a.first;
+		auto price = a.second;
+		cout << "Item: " << item << " Price: " << price << '\n';
+	}
+#endif
+}
 
 //takes user's cart and adds up total 
 void Checkout(std::map<string, int> cart) {

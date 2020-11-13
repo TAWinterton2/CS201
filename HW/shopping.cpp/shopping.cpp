@@ -16,16 +16,25 @@ using std::vector;
 
 int main() {
 	int menu_choice = 0;
+	//shopping cart for user first element being 
 	std::map<string, int> cart;
-	vector<string> stock;
+
+
+	std::map<string, int> stock{
+		{"Ramen", 100},
+		{"Milk Carton", 150},
+	    {"Loaf of Bread", 1050}
+	};
+
 	//main menu
 	cout << "Welcome to KOPINI Store front!" << '\n';
-	while (menu_choice != 4) {
+	while (menu_choice != 5) {
 		cout << "What would you like to do?" << '\n';
 		cout << "1) Add Item" << '\n';
 		cout << "2) Remove Item" << '\n';
 		cout << "3) Look at cart" << '\n';
-		cout << "4) Check out" << '\n';
+		cout << "4) Look at current stock" << '\n';
+		cout << "5) Check out" << '\n';
 
 		cin >> menu_choice;
 		switch (menu_choice) {
@@ -42,6 +51,8 @@ int main() {
 				cout << endl;
 				continue;
 			case 4:
+				DisplayStock(stock);
+			case 5: 
 				Checkout(cart);
 				cout << endl;
 				break;
