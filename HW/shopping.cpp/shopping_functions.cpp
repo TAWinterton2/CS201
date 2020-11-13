@@ -14,9 +14,13 @@ using std::endl;
 using std::string;
 using std::vector;
 
+struct Store_Stock {
+	double unitPrice;
+	int units;
+};
 
 //user selects item to add into their cart
-void AddItem(std::map<string, int> &cart, std::map<string, int>stock) {
+void AddItem(std::map<string, int>& cart, std::map<string, Store_Stock> &stock) {
 	string user_input;
 	int user_amount;
 	cout << "What would you like to add? ";
@@ -56,11 +60,11 @@ void RemoveItem(std::map<string, int> cart) {
 }
 //display current stock
 
-void DisplayStock(std::map<string, int>stock) {
+void DisplayStock(std::map<string, Store_Stock> &stock) {
 	
 	for (const auto a : stock) {
 		auto item = a.first;
-		auto price = a.second;
+		auto price = a.second.unitPrice;
 		cout << "Item: " << item << " // Price: " << price << '\n';
 	}
 	

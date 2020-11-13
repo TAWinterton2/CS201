@@ -19,16 +19,20 @@ int main() {
 	int menu_choice = 0;
 	//shopping cart for user first element being 
 	map<string, int> cart;
-
-
-	map<string, int> stock{
-		{"ramen", 50}
-	};
+	
 	struct Store_Stock {
-		string Item_name;
+	
 		double unitPrice;
 		int units;
 	};
+	Store_Stock Ramen;
+	Ramen.unitPrice = 1.50;
+	Ramen.units = 5000;
+
+	map<string, Store_Stock> stock{
+		{"Ramen", Ramen}
+	};
+
 	//main menu
 	cout << "Welcome to KOPINI Store front!" << '\n';
 	while (menu_choice != 5) {
