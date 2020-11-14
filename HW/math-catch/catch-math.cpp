@@ -1,13 +1,22 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include<iostream>
+#include<math.h>
+#include<stdio.h>
+#include<iomanip>
+#define PI 3.14159265
 
-unsigned int Factorial(unsigned int number) {
-    return number <= 1 ? number : Factorial(number - 1) * number;
-}
+using std::cout;
+using std::endl;
+using std::cin;
 
-TEST_CASE("Factorials are computed", "[factorial]") {
-    REQUIRE(Factorial(1) == 1);
-    REQUIRE(Factorial(2) == 2);
-    REQUIRE(Factorial(3) == 6);
-    REQUIRE(Factorial(10) == 3628800);
+
+//test case for atan2
+TEST_CASE("Show that atan2 computes given value properly", "" ) {
+	double x, y, result;
+	x = -10.0;
+	y = 10.0;
+	result = atan2(y, x) * 180 / PI;
+	
+	REQUIRE(std::round(result) == 135);
 }
