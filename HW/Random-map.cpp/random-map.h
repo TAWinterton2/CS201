@@ -32,7 +32,7 @@ int RandomBetween(int first, int last);
 //void PrintDistribution(const std::map <int, int> &numbers)
 //prints a list (similar to demo code) of the random numbers clearly showing they are 
 // normally or uniformaly distributed.
-void PrintDistribution(const std::map<int, int>& numbers);
+void PrintDistribution( std::map<int, int>& numbers);
 
 
 #endif

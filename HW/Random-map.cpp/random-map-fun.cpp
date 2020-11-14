@@ -56,16 +56,27 @@ int RandomBetween(int first, int last) {
 }
 
 
-void PrintDistribution( std::map<int, int>& numbers) {
-	cout << "Normal Distribution between 1 and 6" << '\n';
+void PrintDistribution(  std::map<int, int>& numbers) {
+	cout << "Uniform Distribution between 1 and 6" << '\n';
 	std::random_device rd;
 	std::default_random_engine e1(rd());
 	mt19937 gen(rd());
 
 	std::uniform_int_distribution<> distrib(1, 6);
-	for (int n = 0; n < 10; ++n) {
-		numbers[n].second;
-		cout << distrib(gen) << ' ';
-		cout << '\n';
+	for (int n = 0; n < 10000; ++n) {
+		++numbers[distrib(gen)];
 	}
-}
+	for (int i = 1; i <= 6; i++) {
+		cout << i << ':' << numbers[i] << "  " << std::string((numbers[i]/2000.0) * 70 , '*') << '\n';
+	}
+	cout << endl;
+	cout << "Normal Distribution between 1 and 6" << endl;
+	std::normal_distribution<> normal_dist(1, 6);
+	numbers.clear();
+	for (int n = 0; n < 10000; ++n) {
+		++numbers[std::round(normal_dist(gen))];
+	}
+	for (int i = 1; i <= 6; i++) {
+		cout << i << ':' << numbers[i] << "  " << std::string((numbers[i] / 2000.0) * 70, '*') << '\n';
+	}
+} 

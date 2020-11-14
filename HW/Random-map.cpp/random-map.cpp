@@ -34,21 +34,12 @@ int main()
       RandomBetweenN(input_one, input_two);
 
    //Distribution w/ RAND()
-    std::cout << "Enter 2 float point numbers: ";
+    std::cout << "Enter 2 Numbers: ";
     std::cin >> input_one;
     std::cin >> input_two;
     RandomBetween(input_one, input_two);
 
-
-    std::map<int, int> hist{
-        {1, 0},
-        {2, 0},
-        {3, 0},
-        {4, 0},
-        {5, 0},
-        {6, 0},
-
-    };
+std::map<int, int> hist;
 
     PrintDistribution(hist);
 
