@@ -1,4 +1,4 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN 
 #include "catch.hpp"
 #include<iostream>
 #include<math.h>
@@ -43,4 +43,15 @@ TEST_CASE("SHow that inner_product() computes properly with given values", "Inne
 	REQUIRE(sum == 240);
 
 }
+
+//test case for sin()
+TEST_CASE("Show that sin() computes properly with given values", "sine() == ") {
+	double result;
+	double x = 2.3;
+
+	REQUIRE(std::round(sin(x)) == 1.0);
+
+
+}
+
 
