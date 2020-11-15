@@ -40,27 +40,32 @@ void AddItem(std::map<string, int> &cart, std::map<string, Store_Stock> stock) {
 		cout << "Enter Quantity: ";
 		cin >> user_amount;
 		cart.insert({ user_input, user_amount });
-		cout << user_amount << " " << user_input << " Has been added to cart";
+		cout << user_amount << " " << user_input << " Has been added to cart" << endl;
 	}
 	else {
-		cout << "Item not in stock";
+		cout << "Item not in stock" << endl;
 	}
 }
 
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
 void RemoveItem(std::map<string, int> &cart) {
 	string user_input;
+	std::map<string, int>::iterator it;
 	cout << "Type in the Item that you want to Remove: ";
 	cin >> user_input;
-	std::transform(user_input.begin(), user_input.end(), user_input.begin(), [](unsigned char c) { return std::tolower(c); }
-	);
-	auto cart_count = cart.count(user_input);
-	if (cart_count != 0) {
+	std::for_each(user_input.begin(), user_input.end(), [](char& c) {
+		c = ::tolower(c);
+		});
+
+	it = cart.find(user_input);
+
+	//find item
+	if (it != cart.end()) {
 		cart.erase(user_input);
 		cout << "Item has been removed" << endl;
 	}
 	else {
-		cout << "Item Does not exist in your shopping cart" << endl;
+		cout << user_input << ' '  << "does not exist in your cart" << endl;
 	}
 
 }
