@@ -26,9 +26,23 @@ int main() {
 	//Stocks of store
 	Store_Stock Ramen;
 	Ramen.unitPrice = 1.50;
+	Store_Stock Apples;
+	Apples.unitPrice = 1.00;
+	Store_Stock Milk;
+	Milk.unitPrice = 5.00;
+	Store_Stock Bread;
+	Bread.unitPrice = 6.50;
+	Store_Stock Bannanas;
+	Bannanas.unitPrice = 3.00;
+
 
 	map<string, Store_Stock> stock{
-		{"ramen", Ramen}
+		{"ramen", Ramen},
+		{"apples", Apples},
+		{"milk", Milk},
+		{"bread", Bread},
+		{"bannanas", Bannanas}
+
 	};
 
 	//main menu
