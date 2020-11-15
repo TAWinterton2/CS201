@@ -69,14 +69,22 @@ void RemoveItem(std::map<string, int> &cart) {
 	}
 
 }
-//display current stock
+
+void ViewCart(std::map<string, int> cart) {
+	for (const auto a : cart) {
+		auto item = a.first;
+		auto quantity = a.second;
+		
+		cout << "Item: " << item << " // Quantity: " << quantity << '\n';
+	}
+}
 
 void DisplayStock(std::map<string, Store_Stock> stock) {
 	
 	for (const auto a : stock) {
 		auto item = a.first;
 		auto price = a.second.unitPrice;
-		cout << "Item: " << item << " // Price: " << price << '\n';
+		cout << "Item: " << item << " // Price: $" << price << '\n';
 	}
 	
 }

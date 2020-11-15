@@ -52,7 +52,7 @@ int main() {
 			cout << endl;
 			continue;
 		case 3:
-			cout << "placeholder";
+			ViewCart(cart);
 			cout << endl;
 			continue;
 		case 4:

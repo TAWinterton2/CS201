@@ -33,6 +33,10 @@ void RemoveItem(std::map<string, int> &cart);
 //takes current stock and displays it to user
 void DisplayStock(std::map<string, Store_Stock> stock);
 
+//ViewCart(std::map<string, int> cart)
+//look at users current cart
+void ViewCart(std::map<string, int> cart);
+
 //void Checkout(std::map<string, int> cart)
 //takes user's cart and adds up total 
 void Checkout(std::map<string, int> cart);
