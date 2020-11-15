@@ -23,11 +23,11 @@ struct Store_Stock {
 
 //void AddItem(std::map<string, int> cart, vector<string> stock)
 //user selects item to add into their cart
-void AddItem(std::map<string, int> &cart, std::map<string, Store_Stock> &stock);
+void AddItem(std::map<string, int> &cart, std::map<string, Store_Stock> stock);
 
 //void RemoveItem(std::map<string, int> cart)
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
-void RemoveItem(std::map<string, int> cart);
+void RemoveItem(std::map<string, int> &cart);
 
 //displaystock(std::map<string, int> stock)
 //takes current stock and displays it to user

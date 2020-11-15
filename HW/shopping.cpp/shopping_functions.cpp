@@ -6,6 +6,9 @@
 #include <cmath>
 #include <ctime>
 #include <cstdlib>
+#include<utility>
+#include "shopping.h"
+
 
 
 using std::cout;
@@ -14,35 +17,38 @@ using std::endl;
 using std::string;
 using std::vector;
 
-struct Store_Stock {
-	double unitPrice;
-	int units;
-};
+
 
 //user selects item to add into their cart
-void AddItem(std::map<string, int>& cart, std::map<string, Store_Stock> &stock) {
+void AddItem(std::map<string, int> &cart, std::map<string, Store_Stock> stock) {
 	string user_input;
-	int user_amount;
+	int user_amount = 0;
 	cout << "What would you like to add? ";
 	cin >> user_input;
-	std::transform(user_input.begin(), user_input.end(), user_input.begin(), [](unsigned char c) { return std::tolower(c); }
-	);
-	auto stock_count = stock.count(user_input);
-	if (stock_count != 0) {
+
+	//convert user_input string to lower case
+	std::for_each(user_input.begin(), user_input.end(), [](char& c) {
+		c = ::tolower(c);
+		});
+
+	std::map<string, Store_Stock>::iterator it;
+
+	//find user_input
+	it = stock.find(user_input);
+	if (it != stock.end()) {
 		cout << "Item is in stock!" << '\n';
 		cout << "Enter Quantity: ";
 		cin >> user_amount;
 		cart.insert({ user_input, user_amount });
-		
+		cout << user_amount << " " << user_input << " Has been added to cart";
 	}
 	else {
-		cout << "Item is not in stock" << '\n';
+		cout << "Item not in stock";
 	}
-
 }
 
 //user selects which item they want to remove from their cart, and the quantity they want to do it at
-void RemoveItem(std::map<string, int> cart) {
+void RemoveItem(std::map<string, int> &cart) {
 	string user_input;
 	cout << "Type in the Item that you want to Remove: ";
 	cin >> user_input;
@@ -60,7 +66,7 @@ void RemoveItem(std::map<string, int> cart) {
 }
 //display current stock
 
-void DisplayStock(std::map<string, Store_Stock> &stock) {
+void DisplayStock(std::map<string, Store_Stock> stock) {
 	
 	for (const auto a : stock) {
 		auto item = a.first;

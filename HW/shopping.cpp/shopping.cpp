@@ -16,21 +16,19 @@ using std::vector;
 using std::map;
 
 int main() {
+
+
 	int menu_choice = 0;
-	//shopping cart for user first element being 
+	//shopping cart for user, first element is the item name, and second is the quantitity user has added
 	map<string, int> cart;
 	
-	struct Store_Stock {
 	
-		double unitPrice;
-		int units;
-	};
+	//Stocks of store
 	Store_Stock Ramen;
 	Ramen.unitPrice = 1.50;
-	Ramen.units = 5000;
 
 	map<string, Store_Stock> stock{
-		{"Ramen", Ramen}
+		{"ramen", Ramen}
 	};
 
 	//main menu
