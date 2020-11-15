@@ -7,6 +7,7 @@
 #include <ctime>
 #include <cstdlib>
 #include<utility>
+#include<numeric>
 #include "shopping.h"
 
 
@@ -90,6 +91,27 @@ void DisplayStock(std::map<string, Store_Stock> stock) {
 }
 
 //takes user's cart and adds up total 
-void Checkout(std::map<string, int> cart) {
-	cout << "Works!";
+void Checkout(std::map<string, int> cart, std::map<string, Store_Stock> stock) {
+	vector<double> sum;
+	double item_total;
+	double final_transaction;
+	for (const auto a : cart) {
+		auto item = a.first;
+		auto quantity = a.second;
+
+		std::map<string, Store_Stock>::iterator it;
+		it = stock.find(item);
+		for (const auto b : stock)
+			if (item == b.first) {
+				item_total = quantity * b.second.unitPrice;
+					sum.push_back(item_total);
+			}
+	}
+	final_transaction = std::accumulate(sum.begin(), sum.end(), 0);
+	cout << "Your Total Today Is : $" << final_transaction << '\n';
+
+
+
+
+	
 }

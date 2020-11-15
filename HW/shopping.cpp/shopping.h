@@ -39,7 +39,7 @@ void ViewCart(std::map<string, int> cart);
 
 //void Checkout(std::map<string, int> cart)
 //takes user's cart and adds up total 
-void Checkout(std::map<string, int> cart);
+void Checkout(std::map<string, int> cart, std::map<string, Store_Stock> stock);
 
 
 #endif

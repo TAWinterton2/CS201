@@ -25,15 +25,15 @@ int main() {
 	
 	//Stocks of store
 	Store_Stock Ramen;
-	Ramen.unitPrice = 1.50;
+	Ramen.unitPrice = 0.99;
 	Store_Stock Apples;
-	Apples.unitPrice = 1.00;
+	Apples.unitPrice = 1.49;
 	Store_Stock Milk;
-	Milk.unitPrice = 5.00;
+	Milk.unitPrice = 4.99;
 	Store_Stock Bread;
-	Bread.unitPrice = 6.50;
+	Bread.unitPrice = 6.99;
 	Store_Stock Bannanas;
-	Bannanas.unitPrice = 3.00;
+	Bannanas.unitPrice = 3.99;
 
 
 	map<string, Store_Stock> stock{
@@ -72,7 +72,7 @@ int main() {
 		case 4:
 			DisplayStock(stock);
 		case 5:
-			Checkout(cart);
+			Checkout(cart, stock);
 			cout << endl;
 			break;
 		default:
