@@ -98,7 +98,7 @@ bool readFile1(const string & filename) {
 		}
 
 		if (string_check == true) {
-			cout << "Error" << endl;
+			cout << "Error: " << b <<  endl;
 		}
 		else {
 			cout << b << '\n';
