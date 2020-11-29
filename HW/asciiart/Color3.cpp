@@ -3,6 +3,7 @@
 // Original Author: Jonathan Metzgar
 // CS 201 course
 #include <iomanip>
+#include <map>
 #include "Color3.hpp"
 
 using std::setw;
@@ -24,10 +25,10 @@ Color3::Color3(int R, int G, int B) {
 
 int Color3::weightedSum() const {
 	// Implement Y = 0.2126R + 0.7152G + 0.0722B
-	int y = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+	int Y = 0.2126 * r + 0.7152 * g + 0.0722 * b;
 
 	// Ensure values are inside the range 0 to 255
-	if (y < 0 || y > 255) {
+	if (Y < 0 || Y > 255) {
 		std :: cout << "ERROR: y out of range" << std:: endl;
 		exit(6);
 	}
@@ -41,6 +42,13 @@ char Color3::asciiValue() const {
 	// 0 to 15. Please pick your own characters
 	const char values[] = "ABCDEFGHIJKLMNOP";
 	unsigned darkness = 0;
+	std::map<int, int> value;
+	std::map<int, int> ::iterator itr;
+
+	for (int n = 0; n <= sizeof(values); n++) {
+		
+	}
+
 	return values[darkness];
 }
 
