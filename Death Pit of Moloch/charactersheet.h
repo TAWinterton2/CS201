@@ -17,7 +17,8 @@ class Character_Sheet
 {
 	public:
 		Character_Sheet();
-		string character_name;
+		string character_name, character_race;
+
 
 	private:
 		
