@@ -52,8 +52,9 @@ int main()
     cout << endl;
 
     // Deallocate the dynamic array.
-
-    
+    delete [] array;
+    delete[] temp;
+    cout << "Deallocated" << endl;
     cout << endl;
 
     // Wait for user

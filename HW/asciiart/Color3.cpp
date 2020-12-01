@@ -40,14 +40,11 @@ char Color3::asciiValue() const {
 	// Use at least 16 characters, sort these from dark to light
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
-	const char values[] = "ABCDEFGHIJKLMNOP";
+	int Y;
+	const char values[] = " .-+*@0#";
+	int val_map = Y / 32;
 	unsigned darkness = 0;
-	std::map<int, int> value;
-	std::map<int, int> ::iterator itr;
 
-	for (int n = 0; n <= sizeof(values); n++) {
-		
-	}
 
 	return values[darkness];
 }
