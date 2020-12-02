@@ -16,17 +16,26 @@ using std::map;
 
 #ifndef CHARACTERSHEET_HPP
 #define CHARACTERSHEET_HPP
+
+//Class for user character sheet
 class Character_Sheet
 {
 	public:
 		Character_Sheet();
-		string character_name, character_race, character_class;
-
+		
+		//Ability score distribution for the calss
 		int Ability_score_Distribute();
+		
+
+		//
+		void Class_Selection();
+
+
 
 		//abilities score
 		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
-		
+		//character info
+		string character_name, character_race, character_class;
 
 
 
@@ -38,4 +47,8 @@ class Character_Sheet
 
 };
 
+//class for NPC
+class NPC {
+
+};
 #endif

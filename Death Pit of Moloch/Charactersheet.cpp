@@ -63,26 +63,25 @@ int Character_Sheet:: Ability_score_Distribute()
 
 		switch (menu) {
 		case 1:
-			STR = array_score[score_assing];
+			STR += array_score[score_assing];
 			break;
 		case 2:
-			CON = array_score[score_assing];
+			CON += array_score[score_assing];
 			break;
 		case 3:
-			INT = array_score[score_assing];
+			INT += array_score[score_assing];
 			break;
 		case 4:
-			INT = array_score[score_assing];
-
+			INT += array_score[score_assing];
 			break;
 		case 5:
-			WIS = array_score[score_assing];
+			WIS += array_score[score_assing];
 			break;
 		case 6:
-			DEX = array_score[score_assing];
+			DEX += array_score[score_assing];
 			break;
 		default:
-			CHA = array_score[score_assing];
+			CHA += array_score[score_assing];
 			break;
 
 		}
@@ -91,10 +90,14 @@ int Character_Sheet:: Ability_score_Distribute()
 			score_assing++;
 	}
 
-
+	delete[] array_score;
 
 
 	return 0;
 }
 
 
+void Character_Sheet::Class_Selection()
+{
+
+}
