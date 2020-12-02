@@ -56,41 +56,35 @@ int main() {
 	
 
 	//Ability Score Allocation
-	cout << "In Dungeon And Dragons, You Character is based around " << '\n'
-		<< "6 Main Abilites" << endl;
+	while (cin.get() != '\n');
+
+	cout << "In Dungeon And Dragons, You Character is based around 6 main abilities" << endl;;
+
+	while (cin.get() != '\n');
+
+	cout << "Strength: Measuring Your Raw physical Strength" << endl;
 	
-	cout << "Press ENTER to continue";
-    while (cin.get() != '\n') ;
+	while (cin.get() != '\n');
 
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
+	cout << "Dexterity: Measuring Your Hand-Eye cordination and Agility" << endl;
+	while (cin.get() != '\n');
+
+	cout << "Consitution: Measuring of Your Physical Endurance and Health" << endl;
+	while (cin.get() != '\n');
+
+	cout << "Intelligence: Measuring Your ability to reason, and memory" << endl;
+
+	while (cin.get() != '\n');
+
+	cout << "Wisdom Measuring Your Perception and Insight " << endl;;
+	while (cin.get() != '\n');
+
+	cout << "Charisma: Meastuing Your the force of your personality" << endl;
+
+	while (cin.get() != '\n');
 	
-	cout << "Press ENTER to continue";
-	while (cin.get() != '\n');
 
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
-
-	cout << "Press ENTER to continue";
-	while (cin.get() != '\n');
-
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
-
-	cout << "Press ENTER to continue";
-
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
-
-	cout << "Press ENTER to continue";
-	while (cin.get() != '\n');
-
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
-
-	cout << "Press ENTER to continue";
-	while (cin.get() != '\n');
-
-	cout << "Strength: Measuring of Your Raw physical Strenght" << endl;
-
-	cout << "Press ENTER to continue";
-	while (cin.get() != '\n');
-	while (cin.get() != '\n');
+	PC.Ability_score_Distribute();
 
 
 	return 0;
