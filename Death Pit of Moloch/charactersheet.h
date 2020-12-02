@@ -27,22 +27,25 @@ class Character_Sheet
 		int Ability_score_Distribute();
 		
 
-		//
+		//Functions for Slecting Class and Race
 		void Class_Selection();
+		void Race_Selection();
 
 
 
-		//abilities score
+		//abilities scores and hit points
 		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
 		//character info
 		string character_name, character_race, character_class;
 
+		//
 
 
 
 	private:
 		
-		int character_level;
+		int character_level = 1;
+		int experince_points;
 
 
 };

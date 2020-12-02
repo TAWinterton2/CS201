@@ -21,6 +21,9 @@ Character_Sheet::Character_Sheet()
 
 { }
 
+
+
+
 int Character_Sheet:: Ability_score_Distribute()
 {
 	std::srand(std::time(nullptr));
@@ -100,4 +103,7 @@ int Character_Sheet:: Ability_score_Distribute()
 void Character_Sheet::Class_Selection()
 {
 
+}
+
+void Character_Sheet::Race_Selection(){
 }
