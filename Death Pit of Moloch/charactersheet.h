@@ -20,12 +20,12 @@ class Character_Sheet
 {
 	public:
 		Character_Sheet();
-		string character_name, character_race;
+		string character_name, character_race, character_class;
 
 		int Ability_score_Distribute();
 
 		//abilities score
-		int STR, CON, INT, WIS, DEX, CHA;
+		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
 		
 
 

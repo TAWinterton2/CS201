@@ -86,6 +86,12 @@ int main() {
 
 	PC.Ability_score_Distribute();
 
+	cout << PC.character_name << " STR: " << PC.STR << endl;
+	cout << PC.character_name << " CON: " << PC.CON << endl;
+	cout << PC.character_name << " INT: " << PC.INT << endl;
+	cout << PC.character_name << " WIS: " << PC.WIS << endl;
+	cout << PC.character_name << " DEX: " << PC.DEX << endl;
+	cout << PC.character_name << " CHA: " << PC.CHA << endl;
 
 	return 0;
 
