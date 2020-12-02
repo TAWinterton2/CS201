@@ -27,16 +27,20 @@ class Character_Sheet
 		int Ability_score_Distribute();
 		
 
-		//Functions for Slecting Class and Race
+		//Functions for printing info about character
+
+		void Player_Character_Name(string user_input);
+		void Race_Selection(string user_race);
 		void Class_Selection();
-		void Race_Selection();
 
-
+		void Print_Abilites();
+		void Print_name();
+		void Print_race();
 
 		//abilities scores and hit points
-		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
+		
 		//character info
-		string character_name, character_race, character_class;
+		
 
 		//
 
@@ -44,10 +48,10 @@ class Character_Sheet
 
 	private:
 		
-		int character_level = 1;
-		int experince_points;
-
-
+		int _character_level = 1;
+		int _experince_points;
+		string _character_name, _character_race, _character_class;
+		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
 };
 
 //class for NPC

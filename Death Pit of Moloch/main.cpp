@@ -26,9 +26,11 @@ int main() {
 	
 	Character_Sheet PC;
 	
-	PC.character_name = user_input_name;
+	PC.Player_Character_Name(user_input_name);
 
-	cout << "Hello " << PC.character_name << "!" << endl;
+	cout << "Hello ";
+	PC.Print_name();
+	cout << "!" << endl;
 
 	//Race Select
 	cout << "Please Select Your Race:" << endl;
@@ -39,20 +41,22 @@ int main() {
 		cin >> menu_select;
 		switch (menu_select) {
 			case 1:
-				PC.character_race = "Dwarf";
+				PC.Race_Selection("Dwarf");
 				break;
 			case 2:
-				PC.character_race = "Elf";
+				PC.Race_Selection("Elf");
 				break;
 			case 3:
-				PC.character_race = "Human";
+				PC.Race_Selection("Human");
 				break;
 			default:
 				cout << "invalid option" << endl;
 
 	}
 	}
-	cout << "your race is " << PC.character_race << endl;
+	cout << "your race is ";
+	PC.Print_race();
+	cout << endl;
 	
 
 	//Ability Score Allocation
@@ -69,29 +73,25 @@ int main() {
 	cout << "Dexterity: Measuring Your Hand-Eye cordination and Agility" << endl;
 	while (cin.get() != '\n');
 
-	cout << "Consitution: Measuring of Your Physical Endurance and Health" << endl;
+	cout << "Consitution: The Measuring of Your Physical Endurance and Health" << endl;
 	while (cin.get() != '\n');
 
-	cout << "Intelligence: Measuring Your ability to reason, and memory" << endl;
+	cout << "Intelligence: Measuring Your ability to reason, and Your memory" << endl;
 
 	while (cin.get() != '\n');
 
 	cout << "Wisdom Measuring Your Perception and Insight " << endl;;
 	while (cin.get() != '\n');
 
-	cout << "Charisma: Meastuing Your the force of your personality" << endl;
+	cout << "Charisma: Measuring the force of your personality and Character" << endl;
 
 	while (cin.get() != '\n');
 	
 
 	PC.Ability_score_Distribute();
-
-	cout << PC.character_name << " STR: " << PC.STR << endl;
-	cout << PC.character_name << " CON: " << PC.CON << endl;
-	cout << PC.character_name << " INT: " << PC.INT << endl;
-	cout << PC.character_name << " WIS: " << PC.WIS << endl;
-	cout << PC.character_name << " DEX: " << PC.DEX << endl;
-	cout << PC.character_name << " CHA: " << PC.CHA << endl;
+	PC.Print_Abilites();
+	
+	
 
 	return 0;
 

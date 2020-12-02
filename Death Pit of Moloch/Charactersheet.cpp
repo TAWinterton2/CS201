@@ -54,7 +54,7 @@ int Character_Sheet:: Ability_score_Distribute()
 	cout << ", Please start Assinging your ability scores: " << '\n'
 		<< "[ Type in 1 - 6 to select the score from the row]" << endl;
 
-	while (score_assing <= 5) {
+	while (score_assing < 6) {
 		cout << "Select which attribute that " << array_score[score_assing] << " Will go to" << endl;
 		cout << "1) STRENGTH" << endl;
 		cout << "2) CONSITUTION" << endl;
@@ -66,25 +66,25 @@ int Character_Sheet:: Ability_score_Distribute()
 
 		switch (menu) {
 		case 1:
-			STR += array_score[score_assing];
+			STR = array_score[score_assing];
 			break;
 		case 2:
-			CON += array_score[score_assing];
+			CON = array_score[score_assing];
 			break;
 		case 3:
-			INT += array_score[score_assing];
+			INT = array_score[score_assing];
 			break;
 		case 4:
-			INT += array_score[score_assing];
+			WIS = array_score[score_assing];
 			break;
 		case 5:
-			WIS += array_score[score_assing];
+			DEX = array_score[score_assing];
 			break;
 		case 6:
-			DEX += array_score[score_assing];
+			CHA = array_score[score_assing];
 			break;
 		default:
-			CHA += array_score[score_assing];
+			cout << "invalid Optoin" << endl;
 			break;
 
 		}
@@ -92,18 +92,44 @@ int Character_Sheet:: Ability_score_Distribute()
 
 			score_assing++;
 	}
-
 	delete[] array_score;
+
 
 
 	return 0;
 }
 
 
-void Character_Sheet::Class_Selection()
-{
 
+
+//PC Name, race and class 
+void Character_Sheet::Player_Character_Name(string user_input) {
+	_character_name = user_input;
+	
+}
+void Character_Sheet::Print_name() {
+	cout << _character_name;
 }
 
-void Character_Sheet::Race_Selection(){
+void Character_Sheet::Class_Selection()
+{
+	STR, CON, INT, WIS, DEX, CHA = 0;
+}
+
+
+void Character_Sheet::Race_Selection(string user_race){
+	_character_race = user_race;
+}
+void Character_Sheet::Print_race() {
+	cout << _character_race;
+}
+void Character_Sheet::Print_Abilites() {
+	cout << _character_name << "Ability Scores:" << endl;
+	cout << "STR:" << STR << endl;
+	cout << "CON:" << CON << endl;
+	cout << "INT:" << INT << endl;
+	cout << "WIS:" << WIS << endl;
+	cout << "DEX:" << DEX << endl;
+	cout << "CHA:" << CHA << endl;
+
 }
