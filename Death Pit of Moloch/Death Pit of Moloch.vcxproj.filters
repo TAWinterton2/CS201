@@ -21,9 +21,15 @@
     <ClCompile Include="Charactersheet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chacter_creation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="charactersheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="character_creation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
