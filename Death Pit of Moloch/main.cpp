@@ -34,9 +34,9 @@ int main() {
 
 	//Race Select
 	cout << "Please Select Your Race:" << endl;
-	cout << "1) Dwarf" << endl;
-	cout << "2) Elf" << endl;
-	cout << "3) Human" << endl;
+	cout << "1) Dwarf (+1 to strength checks)" << endl;
+	cout << "2) Elf (+1 to wisdom checks)" << endl;
+	cout << "3) Human(+1 to Charisma checks)" << endl;
 	while (menu_select > 4 || menu_select == 0) {
 		cin >> menu_select;
 		switch (menu_select) {
@@ -58,6 +58,28 @@ int main() {
 	PC.Print_race();
 	cout << endl;
 	
+	//Class Select
+	cout << "Please Select Your Class:" << endl;
+	cout << "1) Fighter (+1 to strength)" << endl;
+	cout << "2) Ranger(+1 to dexterity)" << endl;
+	cout << "3) Rouge (+1 to dexterity)" << endl;
+	while (menu_select > 4 || menu_select == 0) {
+		cin >> menu_select;
+		switch (menu_select) {
+		case 1:
+			PC.Race_Selection("Dwarf");
+			break;
+		case 2:
+			PC.Race_Selection("Elf");
+			break;
+		case 3:
+			PC.Race_Selection("Human");
+			break;
+		default:
+			cout << "invalid option" << endl;
+
+		}
+	}
 
 	//Ability Score Allocation
 	while (cin.get() != '\n');

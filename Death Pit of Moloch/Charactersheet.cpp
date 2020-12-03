@@ -119,6 +119,7 @@ void Character_Sheet::Class_Selection()
 
 void Character_Sheet::Race_Selection(string user_race){
 	_character_race = user_race;
+	
 }
 void Character_Sheet::Print_race() {
 	cout << _character_race;
@@ -133,3 +134,15 @@ void Character_Sheet::Print_Abilites() {
 	cout << "CHA:" << CHA << endl;
 
 }
+
+//functions for abilites that player can do
+int Character_Sheet::Player_attack() {
+
+}
+int Character_Sheet::skill_check(int DC) {
+	int die_roll = ((rand() % 20) + 1) ;
+}
+struct damage_die {
+	int sword = (rand() % 6) + 1;
+	int axe = (rand() % 8) + 1;
+};
