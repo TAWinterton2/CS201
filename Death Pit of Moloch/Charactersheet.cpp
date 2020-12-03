@@ -120,14 +120,23 @@ void Character_Sheet::Class_Selection(string user_class)
 
 	if (_character_class == "Fighter") {
 		CON += 1;
+		Hit_Points = 10;
+		hit_die = (rand() % 10) + 1;
+		AC = 15;
 	}
 
 	if (_character_class == "Ranger") {
 		DEX += 1;
+		Hit_Points = 8;
+		hit_die = (rand() % 8) + 1;
+		AC = 13;
 	}
 
 	if (_character_class == "Wizard") {
 		INT += 1;
+		Hit_Points = 6;
+		hit_die = ((rand() % 8) + 1) + 2;
+		AC = 12;
 	}
 
 }

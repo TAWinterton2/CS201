@@ -67,9 +67,9 @@ void Character_creation(Character_Sheet &playercharacter) {
 
 	//Class Select
 	cout << "Please Select Your Class:" << endl;
-	cout << "1) Fighter (+1 to Consitution)" << endl;
-	cout << "2) Ranger(+1 to dexterity)" << endl;
-	cout << "3) Wizard (+1 to Intelligence)" << endl;
+	cout << "1) Fighter (+1 to Consitution) || Hit Die: 1d10 || Weapon: Longsword(1d8) || Armour Class: 14" << endl;
+	cout << "2) Ranger(+1 to dexterity) || Hit Die: 1d8 || Weapon: Shortbow(1d6) || Armour Class: 13" << endl;
+	cout << "3) Wizard (+1 to Intelligence) || Hit Die: 1d6 || Weapon: Fireballs!!!(1d8 + 2) || Armour Class: 12" << endl;
 	while (menu_select > 4 || menu_select == 0) {
 		cin >> menu_select;
 		switch (menu_select) {

@@ -59,6 +59,7 @@ class Character_Sheet
 		//info about character 
 		string _character_name, _character_race, _character_class;
 		int Hit_Points;
+		int hit_die;
 		int AC;
 		int damage_dice;
 
