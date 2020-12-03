@@ -31,22 +31,24 @@ class Character_Sheet
 
 		void Player_Character_Name(string user_input);
 		void Race_Selection(string user_race);
-		void Class_Selection();
+		void Class_Selection(string user_class);
+		void Player_Weapon(string user_weapon);
 		
 		//Character info 
 		void Print_Abilites();
 		void Print_name();
 		void Print_race();
+		void Print_class();
 	
 
 		//abilities scores, modifiers and hit points and other abilitites character can do
 		int Player_attack();
-		int skill_check(int DC);
+		int D20();
 		
 		
 
-		//
-
+		// User_info
+		int STR, CON, INT, WIS, DEX, CHA;
 
 
 	private:
@@ -54,7 +56,7 @@ class Character_Sheet
 		int _character_level = 1;
 		int _experince_points;
 		string _character_name, _character_race, _character_class;
-		int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
+		int Hit_Points;
 		int AC;
 		int damage_dice;
 

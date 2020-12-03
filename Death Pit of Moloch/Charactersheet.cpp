@@ -19,11 +19,13 @@ using std::map;
 
 Character_Sheet::Character_Sheet()
 
-{ }
+{ 
+	STR, CON, INT, WIS, DEX, CHA = 0;
+}
 
 
 
-
+//distribute players ability score during set up
 int Character_Sheet:: Ability_score_Distribute()
 {
 	std::srand(std::time(nullptr));
@@ -66,22 +68,22 @@ int Character_Sheet:: Ability_score_Distribute()
 
 		switch (menu) {
 		case 1:
-			STR = array_score[score_assing];
+			STR += array_score[score_assing];
 			break;
 		case 2:
-			CON = array_score[score_assing];
+			CON += array_score[score_assing];
 			break;
 		case 3:
-			INT = array_score[score_assing];
+			INT += array_score[score_assing];
 			break;
 		case 4:
-			WIS = array_score[score_assing];
+			WIS += array_score[score_assing];
 			break;
 		case 5:
-			DEX = array_score[score_assing];
+			DEX += array_score[score_assing];
 			break;
 		case 6:
-			CHA = array_score[score_assing];
+			CHA += array_score[score_assing];
 			break;
 		default:
 			cout << "invalid Optoin" << endl;
@@ -102,7 +104,7 @@ int Character_Sheet:: Ability_score_Distribute()
 
 
 
-//PC Name, race and class 
+//Info about player name
 void Character_Sheet::Player_Character_Name(string user_input) {
 	_character_name = user_input;
 	
@@ -111,21 +113,53 @@ void Character_Sheet::Print_name() {
 	cout << _character_name;
 }
 
-void Character_Sheet::Class_Selection()
+//info about player class
+void Character_Sheet::Class_Selection(string user_class)
 {
-	STR, CON, INT, WIS, DEX, CHA = 0;
+	_character_class = user_class;
+
+	if (_character_class == "Fighter") {
+		CON += 1;
+	}
+
+	if (_character_class == "Ranger") {
+		DEX += 1;
+	}
+
+	if (_character_class == "Wizard") {
+		INT += 1;
+	}
+
+}
+void Character_Sheet::Print_class() {
+	cout << _character_class;
 }
 
-
+//info about player race
 void Character_Sheet::Race_Selection(string user_race){
 	_character_race = user_race;
+
+	if (_character_race == "Human") {
+		CHA += 1;
+	}
+
+	if (_character_race == "Dwarf") {
+		STR += 1;
+	}
+
+	if (_character_race == "Elf") {
+		WIS += 1;
+	}
+
 	
 }
 void Character_Sheet::Print_race() {
 	cout << _character_race;
 }
+
+//info about player abilities
 void Character_Sheet::Print_Abilites() {
-	cout << _character_name << "Ability Scores:" << endl;
+	cout << _character_name << " Ability Scores:" << endl;
 	cout << "STR:" << STR << endl;
 	cout << "CON:" << CON << endl;
 	cout << "INT:" << INT << endl;
@@ -137,12 +171,10 @@ void Character_Sheet::Print_Abilites() {
 
 //functions for abilites that player can do
 int Character_Sheet::Player_attack() {
-
+	int attack_roll = (rand() % 6) + 1;
+	return attack_roll;
 }
-int Character_Sheet::skill_check(int DC) {
+int Character_Sheet::D20() {
 	int die_roll = ((rand() % 20) + 1) ;
+	return die_roll;
 }
-struct damage_die {
-	int sword = (rand() % 6) + 1;
-	int axe = (rand() % 8) + 1;
-};
