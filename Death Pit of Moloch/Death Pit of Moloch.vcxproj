@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="chacter_creation.cpp" />
+    <ClCompile Include="character_creation.cpp" />
     <ClCompile Include="Charactersheet.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

@@ -17,6 +17,8 @@ using std::vector;
 using std::map;
 
 
+
+//Functions for Player Character
 Character_Sheet::Character_Sheet()
 
 { 
@@ -187,7 +189,9 @@ int Character_Sheet::D20() {
 	int die_roll = ((rand() % 20) + 1) ;
 	return die_roll;
 }
+int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {
 
+}
 //ability check functions for each ability
 bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) {
 	int die_result = playercharacter.D20();
@@ -211,3 +215,6 @@ bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) 
 		return false;
 	}
 }
+
+
+//Functions for NPC

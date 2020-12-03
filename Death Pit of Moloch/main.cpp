@@ -17,6 +17,7 @@ using std::map;
 int main() {
 	int menu_select = 0;
 	Character_Sheet PC;
+	NPC Skeleton;
 
 	Character_creation(PC);
 	

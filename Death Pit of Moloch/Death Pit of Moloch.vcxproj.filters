@@ -21,7 +21,7 @@
     <ClCompile Include="Charactersheet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chacter_creation.cpp">
+    <ClCompile Include="character_creation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

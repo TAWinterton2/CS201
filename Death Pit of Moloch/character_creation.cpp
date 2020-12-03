@@ -123,3 +123,9 @@ void Character_creation(Character_Sheet &playercharacter) {
 	playercharacter.Ability_score_Distribute();
 	playercharacter.Print_Abilites();
 }
+
+
+
+void NPC_creation(NPC& _NPC) {
+
+}

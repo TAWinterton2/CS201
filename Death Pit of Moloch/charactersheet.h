@@ -32,7 +32,6 @@ class Character_Sheet
 		void Player_Character_Name(string user_input);
 		void Race_Selection(string user_race);
 		void Class_Selection(string user_class);
-		void Player_Weapon(string user_weapon);
 		
 		//Function to print out Character info 
 		void Print_Abilites();
@@ -44,7 +43,8 @@ class Character_Sheet
 		//Things that a player can do (I.E Checks, roll d20, attack)
 		int Player_attack();
 		int D20();
-		bool Player_Check_STR(int DC, Character_Sheet playercharacter);
+		int Player_Take_Damage(Character_Sheet playercharacter);
+		bool Player_Check_STR(int DC, Character_Sheet NPC);
 		
 		
 
@@ -71,9 +71,12 @@ class Character_Sheet
 
 //class for NPC
 class NPC {
+	//things that NPC can do
+	int NPC_Attack();
+	int D20();
+	int NPC_Take_Damage(NPC _NPC);
+
 private:
-	int _character_level = 1;
-	int _experince_points;
 	string _character_name, _character_race, _character_class;
 	int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
 	int AC;
