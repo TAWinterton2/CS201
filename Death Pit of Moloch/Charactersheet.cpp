@@ -86,7 +86,7 @@ int Character_Sheet:: Ability_score_Distribute()
 			CHA += array_score[score_assing];
 			break;
 		default:
-			cout << "invalid Optoin" << endl;
+			cout << "invalid Option" << endl;
 			break;
 
 		}
@@ -176,6 +176,29 @@ int Character_Sheet::Player_attack() {
 }
 int Character_Sheet::D20() {
 	int die_roll = ((rand() % 20) + 1) ;
-	cout << die_roll;
-	return 0;
+	return die_roll;
+}
+
+//ability check functions for each ability
+bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) {
+	int die_result = playercharacter.D20();
+	int STR_ability_mod= ability_modifiers[STR];
+	
+	cout << "You rolled a : " << die_result << endl;
+	cout << "And your STR modifier is : " << STR_ability_mod << endl;
+
+	int result = die_result + STR_ability_mod;
+
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
 }

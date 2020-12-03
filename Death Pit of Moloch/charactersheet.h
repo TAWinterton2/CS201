@@ -34,34 +34,37 @@ class Character_Sheet
 		void Class_Selection(string user_class);
 		void Player_Weapon(string user_weapon);
 		
-		//Character info 
+		//Function to print out Character info 
 		void Print_Abilites();
 		void Print_name();
 		void Print_race();
 		void Print_class();
 	
 
-		//abilities scores, modifiers and hit points and other abilitites character can do
+		//Things that a player can do (I.E Checks, roll d20, attack)
 		int Player_attack();
 		int D20();
+		bool Player_Check_STR(int DC, Character_Sheet playercharacter);
 		
 		
 
-		// User_info
-		int STR, CON, INT, WIS, DEX, CHA;
 
 
 	private:
-		
+		//PC ability scores
+		int STR, CON, INT, WIS, DEX, CHA;
+
 		int _character_level = 1;
 		int _experince_points;
+		//info about character 
 		string _character_name, _character_race, _character_class;
 		int Hit_Points;
 		int AC;
 		int damage_dice;
 
-		//vector to hold ability modifiers
-		vector<int> ability_modifiers = { -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		//vector to hold ability modifiers (used during checks)
+		vector<int> ability_modifiers = { -5, -4, -4, -3, -3, -2, -3, -1, -1, 0, 
+											0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10 };
 
 };
 
