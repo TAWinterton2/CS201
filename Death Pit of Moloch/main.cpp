@@ -20,6 +20,10 @@ int main() {
 	
 	PC.Print_name();
 
+	cout << endl;
+
+	cout << "D20 Test: ";
+	PC.D20();
 	return 0;
 
 }

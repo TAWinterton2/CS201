@@ -176,5 +176,6 @@ int Character_Sheet::Player_attack() {
 }
 int Character_Sheet::D20() {
 	int die_roll = ((rand() % 20) + 1) ;
-	return die_roll;
+	cout << die_roll;
+	return 0;
 }
