@@ -237,6 +237,12 @@ int main() {
 	}
 	else {
 		cout << "well, guess I won't be going anywhere soon" << endl;
+		while (cin.get() != '\n');
 	}
+
+	story_continue = false;
+
+
+
 	return 0;
 }
