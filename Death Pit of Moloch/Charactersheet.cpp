@@ -200,7 +200,7 @@ int Character_Sheet::short_rest(){
 		difference = Hit_Points - Max_HP;
 		Hit_Points = difference;
 	}
-
+	return Hit_Points;
 }
 
 //int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {}
