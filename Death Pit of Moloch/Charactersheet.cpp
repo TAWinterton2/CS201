@@ -122,7 +122,7 @@ void Character_Sheet::Class_Selection(string user_class)
 
 	if (_character_class == "Fighter") {
 		CON += 1;
-		Hit_Points = 10;
+		Hit_Points = 10 + ability_modifiers[CON];
 		Max_HP = 10;
 		hit_die = (rand() % 10) + 1;
 		AC = 15;
@@ -130,7 +130,7 @@ void Character_Sheet::Class_Selection(string user_class)
 
 	if (_character_class == "Ranger") {
 		DEX += 1;
-		Hit_Points = 8;
+		Hit_Points = 8 + ability_modifiers[CON];
 		Max_HP = 8;
 		hit_die = (rand() % 8) + 1;
 		AC = 13;
@@ -138,7 +138,7 @@ void Character_Sheet::Class_Selection(string user_class)
 
 	if (_character_class == "Wizard") {
 		INT += 1;
-		Hit_Points = 6;
+		Hit_Points = 6 + ability_modifiers[CON];
 		Max_HP = 6;
 		hit_die = ((rand() % 8) + 1) + 2;
 		AC = 12;
@@ -203,7 +203,9 @@ int Character_Sheet::short_rest(){
 	return Hit_Points;
 }
 
-//int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {}
+void Character_Sheet::take_damage(Character_Sheet &player, int damage) {
+	player.Hit_Points -= damage;
+}
 
 
 

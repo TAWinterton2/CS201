@@ -28,6 +28,8 @@ int NPC_Zombie::Ability_score_Distribute() {
 	INT = 3;
 	WIS = 6;
 	CHA = 5;
+
+	Hit_Points = 20 + ability_modifiers[CON];
 	return 1;
 }
 int NPC_Zombie::D20() {
@@ -43,6 +45,8 @@ int NPC_Human::Ability_score_Distribute() {
 	INT = 10;
 	WIS = 10;
 	CHA = 10;
+	
+	Hit_Points = 4 + ability_modifiers[CON]; 
 	return 1;
 
 }

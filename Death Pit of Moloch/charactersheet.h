@@ -38,13 +38,16 @@ class Character_Sheet
 		void Print_name();
 		void Print_race();
 		void Print_class();
-		int short_rest();
+		
 	
 
 		//Things that a player can do (I.E Checks, roll d20, attack)
 		int Player_attack();
 		int D20();
-		int Player_Take_Damage(Character_Sheet playercharacter);
+		int short_rest();
+		void take_damage(Character_Sheet& player, int damage);
+		
+		//skil checks
 		bool Player_Check_STR(int DC, Character_Sheet playercharacter);
 		bool Player_Check_DEX(int DC, Character_Sheet playercharacter);
 		bool Player_Check_CON(int DC, Character_Sheet playercharacter);
@@ -52,6 +55,7 @@ class Character_Sheet
 		bool Player_Check_WIS(int DC, Character_Sheet playercharacter);
 		bool Player_Check_CHA(int DC, Character_Sheet playercharacter);
 		
+	
 		
 
 
@@ -69,14 +73,13 @@ class Character_Sheet
 		int hit_die;
 		int AC;
 		int damage_dice;
-
+		bool alive = true;
 		//vector to hold ability modifiers (used during checks)
 		vector<int> ability_modifiers = { -5, -4, -4, -3, -3, -2, -3, -1, -1, 0, 
 											0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10 };
 
 };
 
-//class for NPC
 
 #endif
 

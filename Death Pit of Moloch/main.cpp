@@ -25,11 +25,12 @@ int main() {
 	bool story_continue = false;
 	Character_Sheet PC;
 	
-
+	cout << "THE DEATH PIT OF MOLOCH" << endl;
+	cout << "Press Enter to begin" << endl;
+	while (cin.get() != '\n');
 
 	//character creation, user reamins in loop untill satisfied with their character
 		Character_creation(PC);
-		PC.Print_name();
 		cout << endl;
 	
 	PC.Print_name();
@@ -46,7 +47,7 @@ int main() {
 	//First Skill check. Check to see if player remebers what he was doing before.
 	cout << "After you let the pain in your head subside, you try to remember what you've been doing." << endl;
 	while (cin.get() != '\n');
-	if (PC.Player_Check_INT(10, PC) == true) {
+	if (PC.Player_Check_INT(11, PC) == true) {
 		cout << "You've been hired by Roland Tress. The Sheriff of Meadheaven" << '\n'
 			<< "He asked you to invistgate the mysterious disapperanece of travvles who were last seen in the" << '\n'
 		    << "vicinity of Hollow Rock Hills." << endl;
@@ -74,7 +75,6 @@ int main() {
 	while (story_continue != true) {
 		cout << "1) [WIS]: Take in and observe the enviroment around you" << endl;
 		cout << "2) Proceed foward into the cave" << endl;
-
 		cin >> menu_select;
 
 		switch (menu_select) {
@@ -85,19 +85,28 @@ int main() {
 					<< "Cavern, you can make out a door, with 2 torches, one on each side of the door." << endl;
 			}
 			else {
-				cout << "You try to make out the cavern you are in, but the way that it is dimily" << '\n'
+				cout << "You try to make out the cavern you are in, but the way that it is dimily." << '\n'
 					<< "lit, making hard for you to see" << endl;
 			}
 			while (cin.get() != '\n');
 			break;
 		case 2:
-			cout << "You carefully start to make you way towrds the other side of the cave" << endl;
+			cout << "You carefully start to make you way towrds the other side of the cave." << endl;
 			while (cin.get() != '\n');
 			story_continue = true;
 		}
 	}
-	
+
+	//Next part of story
+	//player encounters first NPC, and presented with diolauge options
+
 	story_continue = false;
 
+	cout << "As you make your way inside futher into the caver, you notice that " << '\n'
+		<< "Off to your left side, sits an upturned wagon, with a man pinned underneathed." << endl;
+	while (cin.get() != '\n');
 
+	cout << "'Help me, Help me!'" << '\n'
+		<< "The man says to you in a  raspy, low pitched voice" << endl;
+	while (cin.get() != '\n');
 }
