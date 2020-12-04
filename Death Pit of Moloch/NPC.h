@@ -18,8 +18,8 @@ using std::string;
 using std::vector;
 using std::map; 
 
-#ifndef NPC_HPP;
-#define NPC_HPP;
+#ifndef NPC_HPP
+#define NPC_HPP
 
 
 //Class difintion for different NPC

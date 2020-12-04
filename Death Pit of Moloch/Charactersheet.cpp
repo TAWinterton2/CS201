@@ -123,6 +123,7 @@ void Character_Sheet::Class_Selection(string user_class)
 	if (_character_class == "Fighter") {
 		CON += 1;
 		Hit_Points = 10;
+		Max_HP = 10;
 		hit_die = (rand() % 10) + 1;
 		AC = 15;
 	}
@@ -130,6 +131,7 @@ void Character_Sheet::Class_Selection(string user_class)
 	if (_character_class == "Ranger") {
 		DEX += 1;
 		Hit_Points = 8;
+		Max_HP = 8;
 		hit_die = (rand() % 8) + 1;
 		AC = 13;
 	}
@@ -137,6 +139,7 @@ void Character_Sheet::Class_Selection(string user_class)
 	if (_character_class == "Wizard") {
 		INT += 1;
 		Hit_Points = 6;
+		Max_HP = 6;
 		hit_die = ((rand() % 8) + 1) + 2;
 		AC = 12;
 	}
@@ -189,9 +192,20 @@ int Character_Sheet::D20() {
 	int die_roll = ((rand() % 20) + 1) ;
 	return die_roll;
 }
-int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {
+int Character_Sheet::short_rest(){
+	int difference;
+
+	Hit_Points += hit_die;
+	if (Hit_Points > Max_HP) {
+		difference = Hit_Points - Max_HP;
+		Hit_Points = difference;
+	}
 
 }
+
+//int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {}
+
+
 
 
 //ability check functions for each ability
@@ -236,7 +250,7 @@ bool Character_Sheet::Player_Check_DEX(int DC, Character_Sheet playercharacter){
 }
 bool Character_Sheet::Player_Check_CON(int DC, Character_Sheet playercharacter){
 	int die_result = playercharacter.D20();
-	int STR_ability_mod = ability_modifiers[CON];
+	int _ability_mod = ability_modifiers[CON];
 
 
 	int result = die_result + _ability_mod;

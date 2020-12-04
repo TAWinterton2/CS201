@@ -28,6 +28,7 @@ int NPC_Zombie::Ability_score_Distribute() {
 	INT = 3;
 	WIS = 6;
 	CHA = 5;
+	return 1;
 }
 int NPC_Zombie::D20() {
 	int die_roll = ((rand() % 20) + 1);
@@ -42,6 +43,8 @@ int NPC_Human::Ability_score_Distribute() {
 	INT = 10;
 	WIS = 10;
 	CHA = 10;
+	return 1;
+
 }
 int NPC_Human::D20() {
 	int die_roll = ((rand() % 20) + 1);
@@ -56,6 +59,7 @@ int NPC_Humanoid::Ability_score_Distribute() {
 	INT = 10;
 	WIS = 8;
 	CHA = 8;
+	return 1;
 }
 int NPC_Humanoid::D20() {
 	int die_roll = ((rand() % 20) + 1);

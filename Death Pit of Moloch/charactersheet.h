@@ -38,6 +38,7 @@ class Character_Sheet
 		void Print_name();
 		void Print_race();
 		void Print_class();
+		int short_rest();
 	
 
 		//Things that a player can do (I.E Checks, roll d20, attack)
@@ -64,6 +65,7 @@ class Character_Sheet
 		//info about character 
 		string _character_name, _character_race, _character_class;
 		int Hit_Points;
+		int Max_HP;
 		int hit_die;
 		int AC;
 		int damage_dice;
