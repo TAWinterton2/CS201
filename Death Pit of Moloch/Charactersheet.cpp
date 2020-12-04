@@ -22,7 +22,7 @@ using std::map;
 Character_Sheet::Character_Sheet()
 
 { 
-	STR, CON, INT, WIS, DEX, CHA = 0;
+	
 }
 
 
@@ -192,15 +192,114 @@ int Character_Sheet::D20() {
 int Character_Sheet::Player_Take_Damage(Character_Sheet NPC) {
 
 }
+
+
 //ability check functions for each ability
 bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) {
 	int die_result = playercharacter.D20();
-	int STR_ability_mod= ability_modifiers[STR];
+	int _ability_mod= ability_modifiers[STR];
 	
-	cout << "You rolled a : " << die_result << endl;
-	cout << "And your STR modifier is : " << STR_ability_mod << endl;
+	int result = die_result + _ability_mod;
 
-	int result = die_result + STR_ability_mod;
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
+}
+bool Character_Sheet::Player_Check_DEX(int DC, Character_Sheet playercharacter){
+	int die_result = playercharacter.D20();
+	int _ability_mod = ability_modifiers[DEX];
+
+
+	int result = die_result + _ability_mod;
+
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
+}
+bool Character_Sheet::Player_Check_CON(int DC, Character_Sheet playercharacter){
+	int die_result = playercharacter.D20();
+	int STR_ability_mod = ability_modifiers[CON];
+
+
+	int result = die_result + _ability_mod;
+
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
+}
+bool Character_Sheet::Player_Check_INT(int DC, Character_Sheet playercharacter){
+	int die_result = playercharacter.D20();
+	int _ability_mod = ability_modifiers[INT];
+
+
+	int result = die_result + _ability_mod;
+
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
+}
+bool Character_Sheet::Player_Check_WIS(int DC, Character_Sheet playercharacter) {
+	int die_result = playercharacter.D20();
+	int _ability_mod = ability_modifiers[WIS];
+
+
+	int result = die_result + _ability_mod;
+
+	if (result >= DC) {
+		cout << "Check passed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return true;
+	}
+	else {
+		cout << "Check failed!" << endl;
+		cout << result << " VS " << DC;
+		cout << endl;
+		return false;
+	}
+}
+bool Character_Sheet::Player_Check_CHA(int DC, Character_Sheet playercharacter){
+	int die_result = playercharacter.D20();
+	int _ability_mod = ability_modifiers[CHA];
+
+
+	int result = die_result + _ability_mod;
 
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
@@ -216,5 +315,5 @@ bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) 
 	}
 }
 
-
 //Functions for NPC
+

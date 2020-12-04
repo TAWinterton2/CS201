@@ -6,6 +6,9 @@
 #include<map>
 #include"charactersheet.h"
 #include"character_creation.h"
+#include"NPC.h"
+
+
 
 using std::endl;
 using std::cout;
@@ -17,9 +20,13 @@ using std::map;
 int main() {
 	int menu_select = 0;
 	Character_Sheet PC;
-	NPC Skeleton;
+
+	
+
 
 	Character_creation(PC);
+	
+
 	
 	PC.Print_name();
 	cout << "...Let us, Venture Forth!";

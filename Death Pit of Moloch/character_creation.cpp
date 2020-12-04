@@ -18,6 +18,8 @@ using std::string;
 using std::vector;
 using std::map;
 
+
+//function used for character creation 
 void Character_creation(Character_Sheet &playercharacter) {
 	//variable list
 	string user_input_name;
@@ -126,6 +128,4 @@ void Character_creation(Character_Sheet &playercharacter) {
 
 
 
-void NPC_creation(NPC& _NPC) {
 
-}

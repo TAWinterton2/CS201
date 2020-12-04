@@ -44,7 +44,12 @@ class Character_Sheet
 		int Player_attack();
 		int D20();
 		int Player_Take_Damage(Character_Sheet playercharacter);
-		bool Player_Check_STR(int DC, Character_Sheet NPC);
+		bool Player_Check_STR(int DC, Character_Sheet playercharacter);
+		bool Player_Check_DEX(int DC, Character_Sheet playercharacter);
+		bool Player_Check_CON(int DC, Character_Sheet playercharacter);
+		bool Player_Check_INT(int DC, Character_Sheet playercharacter);
+		bool Player_Check_WIS(int DC, Character_Sheet playercharacter);
+		bool Player_Check_CHA(int DC, Character_Sheet playercharacter);
 		
 		
 
@@ -70,19 +75,6 @@ class Character_Sheet
 };
 
 //class for NPC
-class NPC {
-	//things that NPC can do
-	int NPC_Attack();
-	int D20();
-	int NPC_Take_Damage(NPC _NPC);
-
-private:
-	string _character_name, _character_race, _character_class;
-	int STR, CON, INT, WIS, DEX, CHA, Hit_Points;
-	int AC;
-	int damage_dice;
-};
-
 
 #endif
 
