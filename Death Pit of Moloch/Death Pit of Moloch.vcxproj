@@ -143,11 +143,13 @@
     <ClCompile Include="Charactersheet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="storybranch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character_creation.h" />
     <ClInclude Include="charactersheet.h" />
     <ClInclude Include="NPC.h" />
+    <ClInclude Include="storybranch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

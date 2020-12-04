@@ -213,9 +213,12 @@ void Character_Sheet::take_damage(Character_Sheet &player, int damage) {
 //ability check functions for each ability
 bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) {
 	int die_result = playercharacter.D20();
-	int _ability_mod= ability_modifiers[STR];
+	int _ability_mod= ability_modifiers[STR-1];
 	
 	int result = die_result + _ability_mod;
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
@@ -232,11 +235,13 @@ bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) 
 }
 bool Character_Sheet::Player_Check_DEX(int DC, Character_Sheet playercharacter){
 	int die_result = playercharacter.D20();
-	int _ability_mod = ability_modifiers[DEX];
+	int _ability_mod = ability_modifiers[DEX-1];
 
 
 	int result = die_result + _ability_mod;
-
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
@@ -252,11 +257,13 @@ bool Character_Sheet::Player_Check_DEX(int DC, Character_Sheet playercharacter){
 }
 bool Character_Sheet::Player_Check_CON(int DC, Character_Sheet playercharacter){
 	int die_result = playercharacter.D20();
-	int _ability_mod = ability_modifiers[CON];
+	int _ability_mod = ability_modifiers[CON-1];
 
 
 	int result = die_result + _ability_mod;
-
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
@@ -272,11 +279,13 @@ bool Character_Sheet::Player_Check_CON(int DC, Character_Sheet playercharacter){
 }
 bool Character_Sheet::Player_Check_INT(int DC, Character_Sheet playercharacter){
 	int die_result = playercharacter.D20();
-	int _ability_mod = ability_modifiers[INT];
+	int _ability_mod = ability_modifiers[INT - 1];
 
 
 	int result = die_result + _ability_mod;
-
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
@@ -292,11 +301,14 @@ bool Character_Sheet::Player_Check_INT(int DC, Character_Sheet playercharacter){
 }
 bool Character_Sheet::Player_Check_WIS(int DC, Character_Sheet playercharacter) {
 	int die_result = playercharacter.D20();
-	int _ability_mod = ability_modifiers[WIS];
+	int _ability_mod = ability_modifiers[WIS-1];
 
 
+	
 	int result = die_result + _ability_mod;
-
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 	if (result >= DC) {
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
@@ -312,10 +324,13 @@ bool Character_Sheet::Player_Check_WIS(int DC, Character_Sheet playercharacter) 
 }
 bool Character_Sheet::Player_Check_CHA(int DC, Character_Sheet playercharacter){
 	int die_result = playercharacter.D20();
-	int _ability_mod = ability_modifiers[CHA];
+	int _ability_mod = ability_modifiers[CHA-1];
 
 
 	int result = die_result + _ability_mod;
+	cout << "You rolled: " << die_result << endl;
+	cout << "Ability Mod: " << _ability_mod << endl;
+	cout << "Result: " << result << endl;
 
 	if (result >= DC) {
 		cout << "Check passed!" << endl;

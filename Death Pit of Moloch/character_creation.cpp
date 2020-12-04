@@ -44,7 +44,6 @@ void Character_creation(Character_Sheet &playercharacter) {
 	cout << "1) Dwarf (+1 to Strength )" << endl;
 	cout << "2) Elf (+1 To wisdom )" << endl;
 	cout << "3) Human(+1 to Charisma )" << endl;
-	while (menu_select > 4 || menu_select == 0) {
 		cin >> menu_select;
 		switch (menu_select) {
 		case 1:
@@ -60,7 +59,7 @@ void Character_creation(Character_Sheet &playercharacter) {
 			cout << "invalid option" << endl;
 
 		}
-	}
+	
 	cout << "your race is ";
 	playercharacter.Print_race();
 	cout << endl;
@@ -72,7 +71,7 @@ void Character_creation(Character_Sheet &playercharacter) {
 	cout << "1) Fighter (+1 to Consitution) || Hit Die: 1d10 || Weapon: Longsword(1d8) || Armour Class: 14" << endl;
 	cout << "2) Ranger(+1 to dexterity) || Hit Die: 1d8 || Weapon: Shortbow(1d6) || Armour Class: 13" << endl;
 	cout << "3) Wizard (+1 to Intelligence) || Hit Die: 1d6 || Weapon: Fireballs!!!(1d8 + 2) || Armour Class: 12" << endl;
-	while (menu_select > 4 || menu_select == 0) {
+
 		cin >> menu_select;
 		switch (menu_select) {
 		case 1:
@@ -88,10 +87,13 @@ void Character_creation(Character_Sheet &playercharacter) {
 			cout << "invalid option" << endl;
 
 		}
-	}
-	cout << "Your race is: ";
-	playercharacter.Print_class();
+	
 
+
+	cout << "your Class is ";
+	playercharacter.Print_class();
+	cout << endl;
+	while (cin.get() != '\n');
 
 	//Ability Score Allocation
 	while (cin.get() != '\n');
