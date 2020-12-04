@@ -19,6 +19,13 @@ using std::vector;
 using std::map;
 
 
+//combat functoin for zombies
+void Combat(Character_Sheet playercharacter, NPC_Zombie zombie) {
+
+}
+
+
+//Optional Dialouge Branch: Player Initially refuses to help Frankfurt
 bool Dialouge_Refuse_Help(Character_Sheet &playercharacter) {
 	
 	int menu;

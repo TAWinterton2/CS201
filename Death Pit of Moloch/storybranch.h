@@ -21,6 +21,10 @@ using std::map;
 #ifndef STORYBRANCH_HPP
 #define STORYBRANCH_HPP
 
+
+//Function to use for combat encoutners during story
+void Combat(Character_Sheet playercharacter, NPC_Zombie zombie);
+
 //Story branch offs for First segment of adventure (Cavern)
 bool Dialouge_Refuse_Help(Character_Sheet& playercharacter);
 

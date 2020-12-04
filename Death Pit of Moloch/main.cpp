@@ -175,9 +175,65 @@ int main() {
 
 	}
 
+	story_continue = false;
+
 	//branch: Determins if PC manages to help Frankfurt
 	if (frankfurt_rescured == true) {
-		cout << "the man carefully" << endl;
+		cout << "the man carefully gets up from the ground" << '\n'
+			<< "dusting off any dirt from his clothing" << endl;
+		while (cin.get() != '\n');
+		cout << "'Oh, Thank you thank you so much!', the man greatfully replies" << endl;
+		while (cin.get() != '\n');
+		cout << "'Here, I have something I can give you'" << '\n'
+			<< "he begins to move around to the main seat of the wagon, and starts to" << '\n'
+			<< "dig through some various objects, untill he comes out with a few gold pieces in his" << '\n'
+			<< "hand" << endl;
+		while (cin.get() != '\n');
+		cout << " 'I know it may not be much right now, but I have more in the shop over at' " << '\n'
+			<< "shop in Meadhaven. You can consider this an advance payment of sorts' " << endl;
+		while (cin.get() != '\n');
+		
+		while (story_continue != true) {
+			cout << "1) *Politely thank him and take the coins he offers*" << endl;
+			cout << "2) *[CHA] Tell him that perhaps he can toss in a few more*" << endl;
+			cout << "3) *tell him he can keep his coins" << endl;
+			cin >> menu_select;
+
+			switch (menu_select) {
+			case 1:
+				cout << "*You reach out your hand as he places the coins into it*" << endl;
+				PC.Player_add_gold(PC, 15);
+
+				while (cin.get() != '\n');
+				story_continue = true;
+				break;
+			case 2:
+				if (PC.Player_Check_CHA(16, PC) == true) {
+					cout << "*He ponders on the thought for a bit*" << '\n'
+						<< "'Well, I guess you deserve it'" << endl;
+					PC.Player_add_gold(PC, 20);
+					story_continue = true;
+					break;
+				}
+				else {
+					cout << "*He gives you a look, one that is slightly annoyed*" << '\n'
+						<< "I think we will wait untill you can get me out of here alive" << endl;
+					while (cin.get() != '\n');
+					story_continue = true;
+					break;
+				}
+			case 3:
+				cout << "*He gives a surprised look*" << '\n'
+					<< "'You sure? well ok I guess'" << endl;
+				while (cin.get() != '\n');
+				story_continue = true;
+				break;
+			default:
+				cout << "Invaild option" << endl;
+				break;
+			}
+		}
+
 	}
 	else {
 		cout << "well, guess I won't be going anywhere soon" << endl;

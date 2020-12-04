@@ -202,9 +202,15 @@ int Character_Sheet::short_rest(){
 	}
 	return Hit_Points;
 }
-
-void Character_Sheet::take_damage(Character_Sheet &player, int damage) {
+int Character_Sheet::Player_add_gold(Character_Sheet& player, int gold) {
+	player.gold += gold;
+	cout << "You now have: " << player.gold << "G" << endl;
+	while (cin.get() != '\n');
+	return 1;
+}
+int Character_Sheet::take_damage(Character_Sheet &player, int damage) {
 	player.Hit_Points -= damage;
+	return 1;
 }
 
 
@@ -224,12 +230,14 @@ bool Character_Sheet::Player_Check_STR(int DC, Character_Sheet playercharacter) 
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }
@@ -246,12 +254,14 @@ bool Character_Sheet::Player_Check_DEX(int DC, Character_Sheet playercharacter){
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }
@@ -268,12 +278,14 @@ bool Character_Sheet::Player_Check_CON(int DC, Character_Sheet playercharacter){
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }
@@ -290,12 +302,14 @@ bool Character_Sheet::Player_Check_INT(int DC, Character_Sheet playercharacter){
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }
@@ -313,12 +327,14 @@ bool Character_Sheet::Player_Check_WIS(int DC, Character_Sheet playercharacter) 
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }
@@ -336,12 +352,14 @@ bool Character_Sheet::Player_Check_CHA(int DC, Character_Sheet playercharacter){
 		cout << "Check passed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return true;
 	}
 	else {
 		cout << "Check failed!" << endl;
 		cout << result << " VS " << DC;
 		cout << endl;
+		while (cin.get() != '\n');
 		return false;
 	}
 }

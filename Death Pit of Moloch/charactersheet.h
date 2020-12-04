@@ -45,8 +45,8 @@ class Character_Sheet
 		int Player_attack();
 		int D20();
 		int short_rest();
-		void take_damage(Character_Sheet& player, int damage);
-		
+		int take_damage(Character_Sheet& player, int damage);
+		int Player_add_gold(Character_Sheet& player, int gold);
 		//skil checks
 		bool Player_Check_STR(int DC, Character_Sheet playercharacter);
 		bool Player_Check_DEX(int DC, Character_Sheet playercharacter);
@@ -54,7 +54,7 @@ class Character_Sheet
 		bool Player_Check_INT(int DC, Character_Sheet playercharacter);
 		bool Player_Check_WIS(int DC, Character_Sheet playercharacter);
 		bool Player_Check_CHA(int DC, Character_Sheet playercharacter);
-		
+	
 	
 		
 
@@ -63,7 +63,8 @@ class Character_Sheet
 	private:
 		//PC ability scores
 		int STR, CON, INT, WIS, DEX, CHA;
-
+		int gold = 0;
+		int heatlh_potions = 0;
 		int _character_level = 1;
 		int _experince_points;
 		//info about character 
